@@ -1,0 +1,108 @@
+
+
+local Players           = game:GetService("Players")
+local UserInputService  = game:GetService("UserInputService")
+local RunService        = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local player = Players.LocalPlayer
+
+local tool = player.Backpack:FindFirstChild("[Revolver]") or player.Character:FindFirstChild("[Revolver]")
+if not tool then warn("No revolver found") return end
+
+local handle = tool:WaitForChild("Handle", 5)
+local ammo   = tool:WaitForChild("Ammo", 5)
+local range  = tool:WaitForChild("Range", 5)
+local cd     = tool:WaitForChild("ShootingCooldown", 5)
+
+if not (handle and ammo and range and cd) then warn("Missing parts") return end
+
+cd.Value = 0.01  -- machine gun mode
+local maxAmmo = ammo.Value  -- usually 6
+
+local modules = ReplicatedStorage:WaitForChild("Modules", 5)
+local mainRemotes = ReplicatedStorage:WaitForChild("MainRemotes", 5)
+if not (modules and mainRemotes) then warn("No modules/remotes") return end
+
+local gunHandler = require(modules:WaitForChild("GunHandler"))
+local mainRemote = mainRemotes:WaitForChild("MainRemoteEvent")
+local remoteEvent = tool:FindFirstChild("RemoteEvent") or {FireServer = function() end}
+
+local offset = CFrame.new(-1, 0.4, 0)
+local holding = false
+local heartbeatConn
+
+-- THE ONLY METHOD THAT STILL WORKS IN NOV 2025
+-- Direct property override + anti-overwrite protection
+ammo:GetPropertyChangedSignal("Value"):Connect(function()
+	ammo.Value = maxAmmo
+end)
+
+-- Extra layer - force it every frame anyway (double protection)
+RunService.Heartbeat:Connect(function()
+	ammo.Value = maxAmmo
+end)
+
+-- If they use a different Value name (some games patched "Ammo" to "Clip" or "Bullets")
+task.spawn(function()
+	while task.wait(0.1) do
+		for _, v in pairs(tool:GetDescendants()) do
+			if v:IsA("IntValue") or v:IsA("NumberValue") then
+				if v.Name:lower():find("ammo") or v.Name:lower():find("clip") or v.Name:lower():find("bullet") then
+					if v.Value < maxAmmo then
+						v.Value = maxAmmo
+					end
+				end
+			end
+		end
+	end
+end)
+
+local function shoot()
+	local char = player.Character or player.CharacterAdded:Wait()
+	if char.Humanoid.Health <= 0 then return end
+	if tool.Parent ~= char then return end
+	if not gunHandler.getCanShoot(char) then return end
+
+	local muzzlePos = (handle.CFrame * offset).Position
+	local muzzlePart = tool:FindFirstChild("Default") and tool.Default:FindFirstChild("Mesh") and tool.Default.Mesh:FindFirstChild("Muzzle")
+	if muzzlePart then muzzlePos = muzzlePart.WorldPosition end
+
+	local data, hit, pos = gunHandler.shoot({
+		Shooter = char,
+		Handle = handle,
+		ForcedOrigin = muzzlePos,
+		AimPosition = muzzlePos + gunHandler.getAim(muzzlePos) * 200,
+		BeamColor = Color3.fromRGB(255, 140, 38),
+		Range = range.Value
+	})
+
+	mainRemote:FireServer("shotagunzeehO0dxD", handle, muzzlePos, data, hit, pos)
+	remoteEvent:FireServer("Shoot")
+end
+
+-- Hold to spray
+UserInputService.InputBegan:Connect(function(i, p)
+	if p or i.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+	if tool.Parent ~= player.Character then return end
+	
+	holding = true
+	if heartbeatConn then heartbeatConn:Disconnect() end
+	heartbeatConn = RunService.Heartbeat:Connect(function()
+		if not holding or tool.Parent ~= player.Character then 
+			holding = false 
+			if heartbeatConn then heartbeatConn:Disconnect() end 
+			return 
+		end
+		shoot()
+	end)
+end)
+
+UserInputService.InputEnded:Connect(function(i)
+	if i.UserInputType == Enum.UserInputType.MouseButton1 then
+		holding = false
+	end
+end)
+
+tool.Activated:Connect(shoot)
+tool:GetPropertyChangedSignal("Grip"):Connect(function() mainRemote:FireServer("CHECKER_4") end)
