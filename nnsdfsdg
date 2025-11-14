@@ -211,7 +211,7 @@ do
 
     setreadonly(mt, true)
 
-    local AimbotSection = CombatTab:Section({Name = "Aimbot", Side = 1})
+    local AimbotSection = CombatTab:Section({Name = "Silentaim", Side = 1})
 
     AimbotSection:Toggle({
         Name = "Silent Aim",
