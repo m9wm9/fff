@@ -1,5 +1,5 @@
 local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+function VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
 
 data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
 
@@ -7,10 +7,32 @@ data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) i
  
 
 
-local Library = loadstring(game:HttpGet(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('TEWuVqKTarJkWvZjJzSZvZyRoCSAJIcuBxzibqWtZQNInSONuuXgsznaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2k3N2xobS9MaWJyYXJpZXMvcmVmcy9oZWFkcy9tYWluL1V0b3BpYS9MaWJyYXJ5Lmx1YQ==')))()
+local GameInformation = loadstring(game:HttpGet(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('DgkKwYkOxmkLwpptaZfFOuJrTdIoejWSDfoduoFUwgdXVYXmLuDLfUoaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1RoZVJlYWxYT1JBL1JvYmxveC9yZWZzL2hlYWRzL01haW4vU2NyaXB0cyUyMC9VdGlsaXRpZXMlMjAvRmV0Y2glMjBHYW1lJTIwSW5mb3JtYXRpb24ubHVhdQ=='), true))()
+if not GameInformation.Name:find(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('eauaehhbWtSElHKzqjNiPjECdHzaMftfrWeCaLhAXgMQfXzAomcwWkeWmVlIEhvb2Q=')) then return end
+
+loadstring(game:HttpGet(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fFoeBIfeGUtyEKbjxOveAtJZbqCtxDraCTCKYwoHxWdqXTLdFPJCsAXaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1RoZVJlYWxYT1JBL1JvYmxveC9yZWZzL2hlYWRzL01haW4vU2NyaXB0cyUyMC9BbnRpLUNoZWF0cyUyMEJ5cGFzc2VycyUyMC9BZG9uaXMubHVhdQ=='), true))()
+
+local OriginalNameCall
+OriginalNameCall = hookmetamethod(game, VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('YgYVAoPECCoTJPeRavXVxhSkWzOqpbdNYOJQejvjCugvZHVmpsvocCrX19uYW1lY2FsbA=='), newcclosure(function(Object, ...)
+    local Arguments = {...}
+    local Method = getnamecallmethod()
+    if Method == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('URtmdCIInRqoxDsjjVvjESQOrzfkfYCtNLkOcwVPhLKwqmkfOwRQVmGRmlyZVNlcnZlcg==') and Object.Name == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('ivrVrswgqpAbiSUXHQqntgBgIxAziFlEVayOEfbjRRiFpkolBComgXNTWFpblJlbW90ZUV2ZW50') and Arguments[1] == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('ohxYIrRNjbcYxxWwPohXmDKtYLFVAUmpgeYuWoRqwoaXLlNXbWopcpGRGV0ZWN0aW9u') then
+        return coroutine.yield()
+    end
+    return OriginalNameCall(Object, ...)
+end))
+
+
+
+
+
+
+
+
+local Library = loadstring(game:HttpGet(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('pTTEsUaCsvYphMJSEUQypdHpiWUuEUvswxqPOrFeaCTleqwXasGLgFKaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2k3N2xobS9MaWJyYXJpZXMvcmVmcy9oZWFkcy9tYWluL1V0b3BpYS9MaWJyYXJ5Lmx1YQ==')))()
 
 local Window = Library:Window({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('QygWVnUmNvncjPRirrWQfwvQXMoaqfueBFqjcttJyHmccVoMEyyIGFEb2Zmc2V0LnVuaXZlcnNhbCAoemVlaG9vZDIp'),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('LjxKRcbNLqIYJPsNAMAvyQbVFJGdkueyxSIGQxemLwjktozTccTfUIOb2Zmc2V0LnVuaXZlcnNhbCAoemVlaG9vZDIp'),
     GradientTitle = {
         Enabled = true,
         Start = Color3.fromRGB(255, 255, 255),
@@ -20,31 +42,31 @@ local Window = Library:Window({
     }
 })
 
--- Watermark & Keybind List
-local Watermark   = Library:Watermark(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ZIBTpaOouDXZerdnahjJVHmRMLWQqoGKPILvYaKkbnVaAwpABmZZOiQeW91IGFyZSBhIG5pZ2dlcg=='), {RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('mKyIaKgbguECiIYKtLDdYKrJyPpjFzObSgWCivywRAefzeHFihtyEsgNzc5NzQxNTM2NTc4OTE='), Color3.fromRGB(149, 255, 139)})
+-- Watermark & Keybind List (OFF by default)
+local Watermark   = Library:Watermark(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('hDqBVRVgzgmyFMUAhAMoQQGGlgUsKeIznyaEKIsOkoYcioDgpEiyRqYeW91IGFyZSBhIG5pZ2dlcg=='), {VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('aZnFpXsOIfFEcxSNnWEeteozYolzRYHvvsHqGWGNiYBfFZcaTAVeumiNzc5NzQxNTM2NTc4OTE='), Color3.fromRGB(149, 255, 139)})
 local KeybindList = Library:KeybindList()
 Watermark:SetVisibility(false)
 KeybindList:SetVisibility(false)
 
 -- Tabs
-local CombatTab   = Window:Page({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('fLUQctBAmuwWrkWKznkCvIIiyNaoaEdXLguzVEuZNJoPBqGCLaViVykQ29tYmF0'),   Columns = 2})
-local MovementTab = Window:Page({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('vCxMGDETWaWsWUTddNvBVgAcGnWvROQsQqGefGbeoMptSeTBaQBRdVFTW92ZW1lbnQ='), Columns = 2})
-local VisualTab   = Window:Page({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('EAWXIEdcPAMXzyJiydiUFdXkhlVHoKWXLQHPoFDmsvRlSKdmUivYRbBVmlzdWFs'),   Columns = 2})
-local SettingsTab = Window:Page({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('EAEzGNVhvOVxyxkRdkyKwYYsRqlJVRkKeBgkKinBjfRdaXMqBGwlscvU2V0dGluZ3M='), Columns = 2})
+local CombatTab   = Window:Page({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('lmmNvhwPhrQNfRhMeAfYAAIpouAFyqfDeaqqwcsahJWQuxwsHTOHCBIQ29tYmF0'),   Columns = 2})
+local MovementTab = Window:Page({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('YdJJytxAXdScyhOLfkPiMPujcdLJLWXVVuosucMLViZWtRonvgeYawkTW92ZW1lbnQ='), Columns = 2})
+local VisualTab   = Window:Page({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('pbZzYUflrBIhfUKymRRxRSLjcaWmqrSzswkdMTrUubUrNXqTBELHHKAVmlzdWFs'),   Columns = 2})
+local SettingsTab = Window:Page({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('KBxXvFwiaSxTomFBSrWAHIspMsjpPVWWmpfobktXkHILLaJaPttnDfHU2V0dGluZ3M='), Columns = 2})
 
 --=====================================================================
 -- SERVICES & VARIABLES
 --=====================================================================
 
-local Players          = game:GetService(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('arswPNeZQGKbLFeltznJiwyDxIAhmvmSnitKwMQKNItSvoGCfoWcXbhUGxheWVycw=='))
-local RunService       = game:GetService(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('lLyGmaxpJQgAcUDySfEQvSxmKeoaBLsjvQeKzBFaQMqVqPENjntSKfbUnVuU2VydmljZQ=='))
-local UserInputService = game:GetService(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('PXiiTTHjoLuMkbkqRrkuzwuspilgjZkkuFjFACzYwuOKZQUqGjmbBwgVXNlcklucHV0U2VydmljZQ=='))
-local ReplicatedStorage= game:GetService(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('mYcSIGDFhGymfWubCNkIVfZRcLncvJxNrUDDXJqPxATHSsaITbDwKPoUmVwbGljYXRlZFN0b3JhZ2U='))
+local Players          = game:GetService(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('zxtfojjSWcDzGLEcedKzrHDOJairEhIobkZcPACpeHUCbRVTOukdNWLUGxheWVycw=='))
+local RunService       = game:GetService(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('CacsASnfZIScRLDvPTFOBexdqRDFFyCTXKGzsRxIbzGIsWeUDOtUqVmUnVuU2VydmljZQ=='))
+local UserInputService = game:GetService(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('TvFhAdmfpqACiibpEBPWebeeejWfSZXlzYigmByTAmaCHvviDuLLTxzVXNlcklucHV0U2VydmljZQ=='))
+local ReplicatedStorage= game:GetService(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('gKKZMHgDzfTURrcNiIMiPRcalUWqbCxxgqWyGradezPMzwJYXDvRnIuUmVwbGljYXRlZFN0b3JhZ2U='))
 local CurrentCamera    = workspace.CurrentCamera
 local LocalPlayer      = Players.LocalPlayer
 local Client           = LocalPlayer
 local Mouse            = LocalPlayer:GetMouse()
-local Inset            = game:GetService(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('kIDsmOSOzprApRXGtGijEMzGFQswLBAZmxOeNlgTzMfBaWAXreXRUaqR3VpU2VydmljZQ==')):GetGuiInset().Y
+local Inset            = game:GetService(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('hnDkrogPTZBVeMztHbQvqeGOsGLXEhQLwpgbwMtoTtBnNqtgYMNdzHQR3VpU2VydmljZQ==')):GetGuiInset().Y
 
 -- Target Aim
 local TargetAimEnabled = false
@@ -52,9 +74,9 @@ local TargetViewEnabled = false
 local TargetAllEnabled = false
 local viewing, viewDied, viewChanged = nil, nil, nil
 local Target = nil
-local TargetPart = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('nTPQGzPGLJAkLTxIbXxqrQmaafOoPmDZpQEJPVLQXxqOspmImWISKHKSGVhZA==')
+local TargetPart = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('NkBlTPhXfLAWYgKMhwharLggTIUXNFFcoGkbMyDOmFXauIPLbyApOeJSGVhZA==')
 local LeadStrength = 0.10
-local Line = Drawing.new(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('OoCvKZKLjwIDUumcLciowveATJMwiVkpzzpPYwyVnhOnBgijifXmWcKTGluZQ=='))
+local Line = Drawing.new(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('EFRNDGCzcKkhJhRGYQLJwbeKAVtMRAYXrpCmtTSBKzukLYXBZNGypasTGluZQ=='))
 Line.Thickness = 2
 Line.Color = Color3.fromRGB(255, 0, 0)
 Line.Visible = false
@@ -69,10 +91,6 @@ local heartbeatConn = nil
 -- Target All
 local targetAllConn = nil
 local targetAllConnections = {}
-
--- TEAM CHECK + IGNORE PLAYER
-local TeamCheckEnabled = false
-local IgnoredPlayer = nil  -- Player to IGNORE
 
 -- FOV Changer
 local FOVEnabled = false
@@ -92,11 +110,11 @@ local tpKeybindActive = false
 local tpSpeed = 16
 
 local GUN_NAMES = {
-    [RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('PPjzVEWXfEHzqfHyXdVhukoHXNcFaWDVuySFrgkVYaHJNkbsadBsOOcW1Jldm9sdmVyXQ==')]        = true,
-    [RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('HfhBmWaDnFjcTiqpEofEpEkSwNAeoXXCAOxDhUpdGzjklSbXIAblEGdW1JpZmxlXQ==')]           = true,
-    [RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('uMAMOVRXtdXZXEefDmtWpWjretsPqXOzuSlARrKhWzdvheOwZuDoDhvW0RvdWJsZS1CYXJyZWwgU0dd')]= true,
-    [RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('SWTlHnMnpWwFjgoRZpNSkvUepDnwRtyLDfcipRymDCAYhPbKXRjlngAW1RhY3RpY2FsU2hvdGd1bl0=')] = true,
-    [RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('FRBNREMxSNggRZvLhnNeTGcgdOSJcYayRTWwPVFmIkPKMhCLMbXdKCqW1NNR10=')]             = true
+    [VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('ufDGdaXyTAYhCyAsjawJiljoKrawTSaMQWfLqoPMWEwmYJTJkEQUNtJW1Jldm9sdmVyXQ==')]        = true,
+    [VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('mFyxHhHKHUFFNWLausdbmEoIyKPRRDKpupUHwdxgOGVhKyxBVBopsiIW1JpZmxlXQ==')]           = true,
+    [VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('wKfIxlrpZFfebRhPHMlZufiTtnpjtFIrodHopRmzAmhcxHYWMiDYPfkW0RvdWJsZS1CYXJyZWwgU0dd')]= true,
+    [VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('TvUQIsRaNdpevuHlkSMphEVcLNeBUNrlzaynkOOexuAonTLAeLFOCmcW1RhY3RpY2FsU2hvdGd1bl0=')] = true,
+    [VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('NsaXAdLzrwjAtRrAOIEhUCJfyWzCiMuNwSxsxSfEOQvlJFbgJzrcXyYW1NNR10=')]             = true
 }
 
 --=====================================================================
@@ -110,7 +128,7 @@ local ESPConnection = nil
 
 local function renderNameESP(plr)
     if not plr or ESPCache[plr] then return end
-    local text = Drawing.new(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('fHksYWwVmxzPkEGnlYlUMdJaaPmzHldzZiMzKSNUTonvXYGABiOjxGnVGV4dA=='))
+    local text = Drawing.new(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('qbQJEMCHtSbhugdXmkhkVqKteQFJvFEBUnJdqcYaWjmnKXEtuJpDUqXVGV4dA=='))
     text.Size = 14
     text.Font = 2
     text.Outline = true
@@ -130,10 +148,10 @@ local function updateNameESP()
     if not ESPEnabled then return end
     local cam = CurrentCamera
     local localChar = LocalPlayer.Character
-    if not localChar or not localChar:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('XvlpfadaBbkQtHvbsCUpaoDKciUExXfuMjOucRLbRJxJPWwhycgfzFxSHVtYW5vaWRSb290UGFydA==')) then return end
+    if not localChar or not localChar:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fsrvjtYKihZjUrHkRhpcmJezFUBWDnNoNfLtCauJiGTkFBgcBGeyEodSHVtYW5vaWRSb290UGFydA==')) then return end
 
     for plr, text in pairs(ESPCache) do
-        if not plr.Parent or not plr.Character or not plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('zSTHcFvFZlSvtPtzbdPXiaFhQeDJSDsgSrkTpBuIoLfYAMjLKxpMdOlSHVtYW5vaWRSb290UGFydA==')) then
+        if not plr.Parent or not plr.Character or not plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('BvnQUUkTFsyZNrnmmXMPXcMuVfJGiLPTZwyQwMxTNYjBYiDOLprZZleSHVtYW5vaWRSb290UGFydA==')) then
             text.Visible = false
             continue
         end
@@ -171,28 +189,21 @@ end)
 Players.PlayerRemoving:Connect(removeNameESP)
 
 --=====================================================================
--- GET TARGETS (TEAM CHECK + IGNORE PLAYER)
+-- GET TARGETS
 --=====================================================================
-
-local function IsSameTeam(plr1, plr2)
-    return plr1.Team and plr2.Team and plr1.Team == plr2.Team
-end
 
 local function GetClosestTarget()
     local Closest, MinDist = nil, math.huge
     local MousePos = Vector2.new(Mouse.X, Mouse.Y)
     for _, plr in ipairs(Players:GetPlayers()) do
         if plr ~= Client and plr.Character then
-            local Root = plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('jHxAibNZrqlizOoQCpptOoRxaarmPDgwlCZhJjnJgrExKAboFSKXlFpSHVtYW5vaWRSb290UGFydA=='))
-            local Humanoid = plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('HgFINdQelUTtUDnyRtRbIsjWRJXSJHYfxMHvXncrjKAwNGWVrZoWuPGSHVtYW5vaWQ='))
-            local BodyEffects = plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('bOPvUnvPKTwuaxLRitcdhIiewnukLSpiajvvkTtKlTscYonqiUETbmdQm9keUVmZmVjdHM='))
-            local KO = BodyEffects and BodyEffects:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('qFpESfKwdiCnXUXngmJcJRHKPwObIKHbXXoHYuiVetJDQPoUqduccuQSy5P'))
-            local Grabbed = plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('NkcYhQphFVYFQqATRlVrtZyKVVABLrfTzznLfGzDkqbvJdxYeIoWopYR1JBQkJJTkdfQ09OU1RSQUlOVA=='))
+            local Root = plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('PhVjZQeMTVYdFzDrjCTEiCDUYolowQUfJRMGtkQQRgtvdxbBBiLSLBLSHVtYW5vaWRSb290UGFydA=='))
+            local Humanoid = plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('MXxrpjJovyLzByREQfenORETVTEJSPXuzMDKXwATMOdMSOLyZvhBygbSHVtYW5vaWQ='))
+            local BodyEffects = plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('FKvWwBWRwQJjFPxsljnWvIQBnVuLzAXwZLZXoDwPEhROVsgnQdqEEjjQm9keUVmZmVjdHM='))
+            local KO = BodyEffects and BodyEffects:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('FMHPfOqTdcvDMXDAkiGEyoYOuTHbonMqRQCKVoCOutlpunatnJrsmKKSy5P'))
+            local Grabbed = plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('VDHeaoVXolAyegQRJkJFIKgAHCdbcRBqPdvySVaHTfcBmAyPORlrNisR1JBQkJJTkdfQ09OU1RSQUlOVA=='))
 
             if Root and Humanoid and Humanoid.Health > 0 and BodyEffects and KO and not KO.Value and not Grabbed then
-                if TeamCheckEnabled and IsSameTeam(LocalPlayer, plr) then continue end
-                if IgnoredPlayer and plr == IgnoredPlayer then continue end
-
                 local screenPos, onScreen = CurrentCamera:WorldToViewportPoint(Root.Position)
                 if onScreen then
                     local Dist = (Vector2.new(screenPos.X, screenPos.Y) - MousePos).Magnitude
@@ -211,16 +222,13 @@ local function GetAllTargets()
     local targets = {}
     for _, plr in ipairs(Players:GetPlayers()) do
         if plr ~= Client and plr.Character then
-            local Root = plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('BLaIZrtZmEPvGrFvISsnqdiBQASJjSGLQWmuUHlQLEueHpMEyXlNpeRSHVtYW5vaWRSb290UGFydA=='))
-            local Humanoid = plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('JIeDnSxyhTVvgLKBYeyGoeqFSgYTsmOeSMSwVWFxjguLlQrejODKdofSHVtYW5vaWQ='))
-            local BodyEffects = plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('MRqEuLlGZZWEipUXUnONEozBTLjDQdHPFWAcbamOxqJOotovWWyohqwQm9keUVmZmVjdHM='))
-            local KO = BodyEffects and BodyEffects:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('WHueUbsSsDBIaekFdkCrzifdjoExBoRaZtPjdbvFTqmELFSNRRyQtUpSy5P'))
-            local Grabbed = plr.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('RGRLSgILNKAezJUhGzHmVpZCQKPnpTQkHvOZvYdVptOZcXYkaVRSfWAR1JBQkJJTkdfQ09OU1RSQUlOVA=='))
+            local Root = plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HHymQTKNRUQJblHAaQabOFdZsnYTeVHcEKmmAcnjquTMJGhgJVNXzgbSHVtYW5vaWRSb290UGFydA=='))
+            local Humanoid = plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('KJttqXngoDKOudiNKFoQXmikeIOgNLZeovWytWCMpXzTUdRULAqPMvcSHVtYW5vaWQ='))
+            local BodyEffects = plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('eKHpEMqKZHhOYqoerVLvwVDcWlGpFAzIHuqEBpQqicmutxGGMVMwRfvQm9keUVmZmVjdHM='))
+            local KO = BodyEffects and BodyEffects:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('ejHHNXhakXmyiMTKGNVVewiGQoWtbiSpXxItuzSDNYPhMcbkxzOYpNhSy5P'))
+            local Grabbed = plr.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('lgFshlAAYYdraSTBxDnOKygttEYKmvvbuFEeijbZKCdYXOLOqanqrbnR1JBQkJJTkdfQ09OU1RSQUlOVA=='))
 
             if Root and Humanoid and Humanoid.Health > 0 and BodyEffects and KO and not KO.Value and not Grabbed then
-                if TeamCheckEnabled and IsSameTeam(LocalPlayer, plr) then continue end
-                if IgnoredPlayer and plr == IgnoredPlayer then continue end
-
                 table.insert(targets, plr)
             end
         end
@@ -247,10 +255,10 @@ mt.__index = newcclosure(function(self, key)
                 local part = targets[1].Character:FindFirstChild(TargetPart)
                 if part then
                     local predicted = part.Position + (part.Velocity * LeadStrength)
-                    if key == RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('aNkFouAqYNpDQscalbRyXZdohAJucjDXWRkkCLcPdSDotKiZvLrHwHbSGl0') then
+                    if key == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('VaGttvKLXIoHTASJrYGKOxCBiCUrqvGHHCIDMTlvQasqWOXXEvRkVQiSGl0') then
                         lastHitOverride = CFrame.new(predicted)
                         return lastHitOverride
-                    elseif key == RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('zGyUACqKLcNJRkDLeMnBZJYyJggHKyVGQLbRSoDOwFrSFmTiNnTCpeKVGFyZ2V0') then
+                    elseif key == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('QzKcAGIftOtvVLekiBiOmyCwgEXoJUxeRspuCmckQMSEHCAbXcZVlcwVGFyZ2V0') then
                         lastTargetOverride = part
                         return lastTargetOverride
                     end
@@ -260,10 +268,10 @@ mt.__index = newcclosure(function(self, key)
             local part = Target.Character:FindFirstChild(TargetPart)
             if part then
                 local predicted = part.Position + (part.Velocity * LeadStrength)
-                if key == RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('yrolPtQeJPNSVhEFmvjOROrxhoozBOVxgHxwxzZIgIkgGSjZEcDFkZHSGl0') then
+                if key == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('MzDmUmmdTaSjHhUiZTYNrPNzeRryIBHXkTHYoFvNJYNYDgRrClmhMcySGl0') then
                     lastHitOverride = CFrame.new(predicted)
                     return lastHitOverride
-                elseif key == RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('FgUcLhQLzYmIsRnwauYArXkBBSOxgPeevtuSkYPbOllldEITyazXDIAVGFyZ2V0') then
+                elseif key == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('NgTWFbVugwzcMnmCFPqFpkOezLYCFZbHGgcfxBEKwfLGrQcLlhYLyssVGFyZ2V0') then
                     lastTargetOverride = part
                     return lastTargetOverride
                 end
@@ -271,9 +279,9 @@ mt.__index = newcclosure(function(self, key)
         end
     end
 
-    if self == Mouse and key == RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('zbgUrHoEDvLGUtpyAxYLHGyANziYCnBlNfJyshaiIuNZpKzSGbsiIjhSGl0') and lastHitOverride then
+    if self == Mouse and key == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('ozynoKGaROJJEKLklhwPFeWFiVafMsyxuzXTgDehAWVGodLSwpFaQFISGl0') and lastHitOverride then
         local r = lastHitOverride; lastHitOverride = nil; return r
-    elseif self == Mouse and key == RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('mPvwwqagKfvrBXderxOpJJaMFQSUfnDPDvDBBFmbYWJGPGDwwPNFgfbVGFyZ2V0') and lastTargetOverride then
+    elseif self == Mouse and key == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('dtDRAlfkkLPwHNHrwSUckDvdtMEAXyGrNVpJuybQgIByaaxViyGCgiOVGFyZ2V0') and lastTargetOverride then
         local r = lastTargetOverride; lastTargetOverride = nil; return r
     end
 
@@ -295,11 +303,11 @@ local function startViewing(plr)
     CurrentCamera.CameraSubject = viewing.Character
 
     viewDied = viewing.CharacterAdded:Connect(function()
-        repeat task.wait() until viewing.Character and viewing.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('DxcoRvmqRftuiobTycARPjzQNocaJSvafLOeWsATJrgEtpeoiFvsXjGSHVtYW5vaWRSb290UGFydA=='))
+        repeat task.wait() until viewing.Character and viewing.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('zyOTXaPQHyzKXYQtvJDFKoVfokMUcFKLMlISQAQkmUVLyKHHozuLDrbSHVtYW5vaWRSb290UGFydA=='))
         CurrentCamera.CameraSubject = viewing.Character
     end)
 
-    viewChanged = CurrentCamera:GetPropertyChangedSignal(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ndyaNSQfTFbkWGnARhvAmSngSUuWRNBbEnPHdwovhKFoeJFgNWhcoDBQ2FtZXJhU3ViamVjdA==')):Connect(function()
+    viewChanged = CurrentCamera:GetPropertyChangedSignal(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('vBRWASWSXaquKAzXmpeGvwexHyGdlgvdEnAwbVFPizEkjlRqevnCJxZQ2FtZXJhU3ViamVjdA==')):Connect(function()
         if viewing and CurrentCamera.CameraSubject ~= viewing.Character then
             CurrentCamera.CameraSubject = viewing.Character
         end
@@ -310,7 +318,7 @@ local function stopViewing()
     if viewDied then viewDied:Disconnect() end
     if viewChanged then viewChanged:Disconnect() end
     viewing = nil
-    CurrentCamera.CameraSubject = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('TuCSnxhValypShQBbirmXNWleEexbClQyNeczaPGHfDVmzKidkCZWiGSHVtYW5vaWQ='))
+    CurrentCamera.CameraSubject = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('INObrYoDoeKLkoWsYjRwnQdtYqAzKKsFRiLQhDGTRzKOIqlHncBwHlVSHVtYW5vaWQ='))
 end
 
 --=====================================================================
@@ -371,19 +379,19 @@ local function shoot(targetPlayer)
     local char = LocalPlayer.Character
     if not char or char.Humanoid.Health <= 0 then return end
 
-    local tool = currentTool or (targetAllConn and LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('mAioqrqbhAebNhvKwLufcjeqRblPGiVYMtOZtnAuJsycaGsqmTJXnQZVG9vbA==')))
+    local tool = currentTool or (targetAllConn and LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('NyAJTZuaMuHsEyjTCelImfMbphjuBElbeLuasvxjaAjCzewqctmxmyTVG9vbA==')))
     if not tool or tool.Parent ~= char then return end
 
-    local Handler = ReplicatedStorage:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('MuPHWFkicBPMZTMvetLgonROyCiuNTotaztrAzCNKBBxahMLBqjjqLfTWFpbk1vZHVsZQ=='))
+    local Handler = ReplicatedStorage:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('pMVZmoMmHUBhflBWqIGlSldOSCmQOnjnSQTvfBzSUTAZPrKmIYpTmuoTWFpbk1vZHVsZQ=='))
     local Module = require(Handler)
-    Module.Ignored = {workspace:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('veMxZhknYSmRlspyjHWhtgTqLZyAamqpNIXAWOXwbjAPgZvRmcljuopVmVoaWNsZXM=')), workspace:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('pVJLHwtVIlDmgsbNfiamqVUaSADpeCmkGyAIcGxXgKGVvFzYpwBsfXcTUFQ')), workspace:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('sobgTRNNhBDNqDdpCTCYMlygjbMlvFcVUgIfaKpFZIizvkTNUXuDKTcSWdub3JlZA=='))}
+    Module.Ignored = {workspace:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fDxGVsRErzqCWMQQwCNswjhUCxRMoefvBCDjAOdTYejjHtXObkOiQLlVmVoaWNsZXM=')), workspace:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fNKUfSQswbhJgfiVldizsZFBSAoKTmtABPVdxtNeMYJdvRRwBClKluuTUFQ')), workspace:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('MqhUlJzyyhMrgYxVwiFvSbrraTTEKDVLTDzsQbwAvzhyzSNUnlyDAJiSWdub3JlZA=='))}
 
-    local handle = tool:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('duQuXYtTNseodshEzwPfecAzKpdDgXPOlXJnlMPXhvrmCvwkjtwvmttSGFuZGxl'))
+    local handle = tool:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('XkWgIdGCxsfhQEuxjiaEVkxnFVdUTcXuTAZvAupCwFZolZVIrSAKeslSGFuZGxl'))
     if not handle then return end
 
-    local gunHandler = require(ReplicatedStorage:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('HzEjZypHKMKfvxFiQqOlnonbRMVaFGeBVgSepKGnOXdxaphtNGDjqCbTW9kdWxlcw==')):WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('VjvtAmETVEyFBEkTMEuldpKnibbAYOMQsBHNGYhZvDLCEMbYJDLbDoFR3VuSGFuZGxlcg==')))
-    local mainRemote = ReplicatedStorage:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('qsHROpYzjpEBkVwByuopOaQDZUSvmCPYEsSuluIcjAJExOQSIQAKQEQTWFpblJlbW90ZXM=')):WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('YEjtVEyXfnLEWNOPgdDOSHoGGfIJhHavQYPFNVPVjcGOQTLJbokDHttTWFpblJlbW90ZUV2ZW50'))
-    local remoteEvent = tool:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('pNzECgRqxNyxpSAncrjVqXCPPdABJgLYsaMEJDgqzvTjwbutDwMQtBKUmVtb3RlRXZlbnQ=')) or {FireServer = function() end}
+    local gunHandler = require(ReplicatedStorage:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('kyhxljPHGEWzMQGmTvWtndGwySNXwbdfLQGlwAzTHeZOdJohkvZJmFITW9kdWxlcw==')):WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('YGCPpTDHACjHTyhZScNxInQNXBrMQJVYiuOqOxgUBWKxupStAgmqbedR3VuSGFuZGxlcg==')))
+    local mainRemote = ReplicatedStorage:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('OErKsytzyTldFjXYkUqwRlQPMhZXzVbueviHKCXVaYudZieFXewCAKRTWFpblJlbW90ZXM=')):WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('BwyMXUOIUOVpbqXbvWGTNWWpkPnsctSGflZNmTZVjiwQbimrQgpggpeTWFpblJlbW90ZUV2ZW50'))
+    local remoteEvent = tool:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('RNpyYNwTqWbedcAZtJRDyYKcfjrcDnEiQTufKpKUwJYGjwcNMgZuMBeUmVtb3RlRXZlbnQ=')) or {FireServer = function() end}
 
     if not gunHandler.getCanShoot(char) then return end
 
@@ -411,11 +419,11 @@ local function shoot(targetPlayer)
     if not success or not data then return end
 
     pcall(function()
-        mainRemote:FireServer(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('vxYXikXIwGztMMErXNkmKQIOMYszUoWYcuTrDgvnZAjKYYVupjcShbjc2hvdGFndW56ZWVoTzBkeEQ='), handle, muzzlePos, data, hit or false, pos or Vector3.zero)
+        mainRemote:FireServer(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fThgTYoziEyYdRnVQUaqWtuGXlvdOlRCceyQBbFIYvUEYrMfkcQHJuMc2hvdGFndW56ZWVoTzBkeEQ='), handle, muzzlePos, data, hit or false, pos or Vector3.zero)
     end)
 
     pcall(function()
-        if remoteEvent.FireServer then remoteEvent:FireServer(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('zubeWHKLTrDxMSWvKnwExltVTRqpkRyiVNWMTxQqXjAlDUaPFthwsLLU2hvb3Q=')) end
+        if remoteEvent.FireServer then remoteEvent:FireServer(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('JLfJBQOwdPcVMWoKQkNFvSGQRDrXcLKDJJWzfptCywOjpuHFLLRrEJjU2hvb3Q=')) end
     end)
 end
 
@@ -438,15 +446,15 @@ local function enableRapidFire()
     currentTool = findTool()
     if not currentTool then return end
 
-    local handle = currentTool:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('WwqPoIKZhblgRayonHcfpURrCynSkOWBOsQaPLEVIQSOQEIdAlRpewlSGFuZGxl'),5)
-    local ammo   = currentTool:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('yvHevVmIuaUVZAnkxmTAJKlLpMxsIylvXTLHrQwuSxSnmLmCxSXUmXCQW1tbw=='),5)
-    local cd     = currentTool:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('dDzOCIucwwwFEXSbtwmULKiBjzoozCyexoLgpRaBbufcBGQHireZHxFU2hvb3RpbmdDb29sZG93bg=='),5)
+    local handle = currentTool:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('vrYahdwAmXgXzWCyZyuCbzZKCznQzLKaBNpCWXtaMLWYbJsTbcPgUmwSGFuZGxl'),5)
+    local ammo   = currentTool:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('xERfjQYEdGaovzRmCfpkCEOCQumrQiRPdfEIsCFjQEaFFWOIkAnuejlQW1tbw=='),5)
+    local cd     = currentTool:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('KuyazheELhpuvXUeriCDDeZdEjvxvBjUXzIrVpAaORiwbQQnLvcnPhLU2hvb3RpbmdDb29sZG93bg=='),5)
     if not (handle and ammo and cd) then return end
 
     cd.Value = 0.01
     local maxAmmo = ammo.Value
 
-    table.insert(connections, ammo:GetPropertyChangedSignal(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('HZqIRTsqJXWkmqShAvEkwppwxPfqEDONrTQzFBZycEoGdgPuLUgZnJpVmFsdWU=')):Connect(function()
+    table.insert(connections, ammo:GetPropertyChangedSignal(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('BxfqofqiBukjzPrAvXXjKliRDiJAzuxQFITsNZslOhlBNpzHXDkljGMVmFsdWU=')):Connect(function()
         if revolverEnabled then ammo.Value = maxAmmo end
     end))
     table.insert(connections, RunService.Heartbeat:Connect(function()
@@ -476,8 +484,8 @@ local function enableRapidFire()
     local activatedConn = currentTool.Activated:Connect(function() shoot(nil) end)
     table.insert(connections, activatedConn)
 
-    table.insert(connections, currentTool:GetPropertyChangedSignal(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ATnpBJuVbgMEHvLBraWIswkuAQVKafpOnUISEGkqgbTLqzqnDYNceNER3JpcA==')):Connect(function()
-        ReplicatedStorage:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('fBIrxEMerJaqyeMfjoBLZxgLFfWmepqmvbxHUNQCWMtJLLDDtHVTGDjTWFpblJlbW90ZXM=')):WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('rIhLumicHwvkILTbqiWCDjuQVEoFwRVKqTQNfeFpePoQfYEgsgQIAfCTWFpblJlbW90ZUV2ZW50')):FireServer(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('LwbBLxDqUyREsOkGtAgFNYgQobEilUKMEuNgJdwDEidvvyYVYgEQYgrQ0hFQ0tFUl80'))
+    table.insert(connections, currentTool:GetPropertyChangedSignal(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('XILhVODlhHJVLQhgmmTScDlpqbAAflXtOttsQYVMCEVfnIFGoyFtyLER3JpcA==')):Connect(function()
+        ReplicatedStorage:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('kqoQXchAPsICnnkMyfsxYyCHaHZfgmSSiDhfwZpatgHwlcaGNqjaHdvTWFpblJlbW90ZXM=')):WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('MyoIyQJfDnjykXTlJXdEKWALIJZfiuxFJUEVuGttygbuGuGVhMezLgjTWFpblJlbW90ZUV2ZW50')):FireServer(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('zYtBukkQwkZyUnZsEogiFkwEZLYhPijjiwTzuQNHQSHYhwGzYGLaEVFQ0hFQ0tFUl80'))
     end))
 end
 
@@ -486,7 +494,7 @@ local function disableRapidFire()
     holding = false
     currentTool = nil
     disconnectRapidFire()
-    Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('lHBiTyBEjChcBiNHgBVwSjYWijmCoGZPOjYLOQXCgeAlhbAGXsWQtAWUmFwaWQgRmlyZSBESVNBQkxFRA=='), 2, Color3.fromRGB(255,100,100))
+    Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('gaWddzUYQDTxVwhfNaciELXefPARxXZekwVTibuklHEhAcHZbBnusrkUmFwaWQgRmlyZSBESVNBQkxFRA=='), 2, Color3.fromRGB(255,100,100))
 end
 
 --=====================================================================
@@ -505,15 +513,15 @@ local function startTargetAllRapidFire()
     local tool = findTool()
     if not tool then return end
 
-    local handle = tool:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('msXlfzemWIFkXgRcjmkupOTKIcmMbggriaPBOlcntaicLlFbkXAqIgRSGFuZGxl'),5)
-    local ammo   = tool:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('xTtYDnqKroSrzaTautYKWpBUubWqjwpPUczYWJoPdRsdRbbhvGCPqVtQW1tbw=='),5)
-    local cd     = tool:WaitForChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('UEfEdGAWyAMsDaOCJKSvgGcaZQSMRcnKiEFvJKsXGpiXBojsbLQtqJmU2hvb3RpbmdDb29sZG93bg=='),5)
+    local handle = tool:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('CMRZjsGnlyZXKfrXxgkzyknrrpqMnyZmESqJkqHfihnvaglYTArqeMOSGFuZGxl'),5)
+    local ammo   = tool:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('yefazjBmIIzfdshFXodWShcZtCswXeJcIinboPPWbIaPZkhvoZbcTSuQW1tbw=='),5)
+    local cd     = tool:WaitForChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('gixHYuvZPxnGTZimGvhrhAEpDBEOqxtizLwQqNUvHCORrXbvTouutWRU2hvb3RpbmdDb29sZG93bg=='),5)
     if not (handle and ammo and cd) then return end
 
     cd.Value = 0.01
     local maxAmmo = ammo.Value
 
-    table.insert(targetAllConnections, ammo:GetPropertyChangedSignal(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ECzKkLyilGhMIzxGpNDQGRCSdRadqewecpbvvYimFZGlLpyrIFpJmTGVmFsdWU=')):Connect(function()
+    table.insert(targetAllConnections, ammo:GetPropertyChangedSignal(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('dwkbseOjzZNNqbTlkYvZZlQKbymfHxtJHQTWLOpNYBtihSKzihDuQJVVmFsdWU=')):Connect(function()
         if TargetAllEnabled then ammo.Value = maxAmmo end
     end))
     table.insert(targetAllConnections, RunService.Heartbeat:Connect(function()
@@ -533,7 +541,7 @@ end
 local function stopTargetAllRapidFire()
     TargetAllEnabled = false
     disconnectTargetAll()
-    Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('kWJothrUqLMeHZCyzGnCoTGSwVGZsjmWMoNbFKPjEJHfxIukQkmBnXXVGFyZ2V0IEFsbCBESVNBQkxFRA=='), 2, Color3.fromRGB(255,100,100))
+    Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('ADDerJhzYLRGtOGiwZdpJgvsoOwGTEpkGBDGhOhJCQLJPUunFCMvwwHVGFyZ2V0IEFsbCBESVNBQkxFRA=='), 2, Color3.fromRGB(255,100,100))
 end
 
 --=====================================================================
@@ -552,8 +560,13 @@ local function enableFOVChanger()
 end
 
 local function disableFOVChanger()
-    if FOVConnection then FOVConnection:Disconnect() FOVConnection = nil end
-    if CurrentCamera then CurrentCamera.FieldOfView = 80 end
+    if FOVConnection then
+        FOVConnection:Disconnect()
+        FOVConnection = nil
+    end
+    if CurrentCamera then
+        CurrentCamera.FieldOfView = 80
+    end
 end
 
 --=====================================================================
@@ -563,13 +576,13 @@ end
 local function startFlying()
     if isFlying then return end
     local char = LocalPlayer.Character
-    local root = char and char:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('HWeItbEwEXlzxghhpGfGOCqvJvaUdrUiRjpgIGUYmCmKlBEknoHyzQeSHVtYW5vaWRSb290UGFydA=='))
-    local hum = char and char:FindFirstChildWhichIsA(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('cFHEUfIjayuHGMyGwwOsQLsHCUfXQECqtdvTGLsFHymbkFvXKkqTEqQSHVtYW5vaWQ='))
+    local root = char and char:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('dIfGPQtBkBATLodZrYRxcEOnSZjLFAHrCkOREDmvNCMhwcOtCDiVDomSHVtYW5vaWRSb290UGFydA=='))
+    local hum = char and char:FindFirstChildWhichIsA(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('rdKlXGurDLukSnWGntmOZbXgYgUKajGinfCOvCIBgcsfonVghLIzBuSSHVtYW5vaWQ='))
     if not root or not hum then return end
 
     isFlying = true
     local oldState = hum:GetState()
-    root:SetAttribute(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('mBLYzPFsUrEnxKFiYKBztxuPVvduJQAzcayRRjpiNBBtuFeCjWzPGDlT2xkSHVtYW5vaWRTdGF0ZQ=='), oldState)
+    root:SetAttribute(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('oFnyJmjGrPSoEbyHylHpQhYyVmGsgGPbkBhlACwmwjCaCNDmXRZCBNfT2xkSHVtYW5vaWRTdGF0ZQ=='), oldState)
     hum:ChangeState(Enum.HumanoidStateType.Physics)
 
     flyConnection = RunService.RenderStepped:Connect(function(delta)
@@ -593,7 +606,7 @@ local function startFlying()
         root.AssemblyAngularVelocity = Vector3.zero
     end)
 
-    Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('FiAbdxUgdeGgFSXNjkMTMkNxwhoqWLKIFxgbzSXysXGFBaKhgWltupZRmx5IE9OIChGKQ=='), 2, Color3.fromRGB(0, 255, 255))
+    Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HSQxjowFNCqLceeRavNNAlAExPlimMHsubLNeRZJWRsThVAXZPsAdgSRmx5IE9OIChGKQ=='), 2, Color3.fromRGB(0, 255, 255))
 end
 
 local function stopFlying()
@@ -602,14 +615,14 @@ local function stopFlying()
     if flyConnection then flyConnection:Disconnect() flyConnection = nil end
 
     local char = LocalPlayer.Character
-    local root = char and char:FindFirstChild(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('qkiodphgTWbwTcwDSQmRypRMysDoFhzkIUFZgcFpqYFmadDjNghjmXbSHVtYW5vaWRSb290UGFydA=='))
-    local hum = char and char:FindFirstChildWhichIsA(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('fWcgNbhpTMfpkGVikfSFivkgaIxNVJurPVJSHPjDaUdGTUZzxCjrLyuSHVtYW5vaWQ='))
+    local root = char and char:FindFirstChild(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('ogMURyGstiHeImIdLhGOoVvYojKOdzlbfwGGWiXanycYZDqHbgSNQHpSHVtYW5vaWRSb290UGFydA=='))
+    local hum = char and char:FindFirstChildWhichIsA(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('oibSoVYhsxovFTjmbXGMLdbbqEcYTJPWoEjixsadaogVgRgIuZiMhtgSHVtYW5vaWQ='))
     if hum and root then
-        local oldState = root:GetAttribute(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('pxZHKdyymWqhwJiqrlXvvpIqpLZYSQxZFBkxVBZDoBzTzEdFeJJSXLcT2xkSHVtYW5vaWRTdGF0ZQ=='))
+        local oldState = root:GetAttribute(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('oNmGPdoVPwjAZidCfvjfhQBnEYOYHUBniIoDoaGaCUQoXmsoaOklnKmT2xkSHVtYW5vaWRTdGF0ZQ=='))
         hum:ChangeState(oldState or Enum.HumanoidStateType.GettingUp)
     end
 
-    Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('FSxZdDEORfVsxIazgoKyWvxCFfcCaSWeKmpDitZMCHryluyinpRNroVRmx5IE9GRiAoRik='), 2, Color3.fromRGB(255, 100, 100))
+    Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('BbugfLMsnoGQHrdQLiSChAvVqvrvIIhQqJHLENUoasBaKsWrQxytSttRmx5IE9GRiAoRik='), 2, Color3.fromRGB(255, 100, 100))
 end
 
 --=====================================================================
@@ -620,7 +633,7 @@ task.spawn(function()
     while task.wait() do
         if tpKeybindActive and LocalPlayer.Character then
             local chr = LocalPlayer.Character
-            local hum = chr:FindFirstChildWhichIsA(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('XPrpvkPodbjUGMyQfvYlvhommCsjcUotHpstxCMKMlkujIrBZtscIDKSHVtYW5vaWQ='))
+            local hum = chr:FindFirstChildWhichIsA(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('VomDFuNmadoSpkxgLPqVDlomNrsXIIhLlHFlFZVzPyQgajzGQzLDVjVSHVtYW5vaWQ='))
             if chr and hum and hum.MoveDirection.Magnitude > 0 then
                 chr:TranslateBy(hum.MoveDirection * tpSpeed * 10 * RunService.Heartbeat:Wait())
             end
@@ -629,15 +642,15 @@ task.spawn(function()
 end)
 
 --=====================================================================
--- UI: TARGET AIM
+-- UI: TARGET AIM (Combat - Left)
 --=====================================================================
 
-local TargetAimSection = CombatTab:Section({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('hSqTuJgHAUEiWQaxIuFyQMdguZuutpIRdTJYfxQPUaLrXIqAeMVQWvJVGFyZ2V0IEFpbQ=='), Side = 1})
+local TargetAimSection = CombatTab:Section({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('DwrypoMrJYEVGhJeWvURtdHXllFbCQFeOncdBNszIoFCwudqiBuYfszVGFyZ2V0IEFpbQ=='), Side = 1})
 
 TargetAimSection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('RnInqIlgFZCqZwbUVMwkSHkEeOthOqSoTidJVkIdhDsctKrgWFLJGrLVGFyZ2V0IEFpbQ=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('CnHTYAlftQWsBCpefcpfOVrkCkFETxAGjFWnQdsbMSJcrPvvalUolDxVGFyZ2V0IEFpbQ=='),
     Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('sLbKcBBddQXzWfzLuqNWasVCVTtyjWWYXCiRZAIABDdHXbwUymFkRvKVGFyZ2V0QWlt'),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('qlEqRCdelSlWVDpVlHbqrtnZQCmUIreFytpJPVQfGgXqrhGZbvpbaCbVGFyZ2V0QWlt'),
     Callback = function(v)
         TargetAimEnabled = v
         if not v then
@@ -649,9 +662,9 @@ TargetAimSection:Toggle({
 })
 
 TargetAimSection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('wXyPSYpOEBZNZHIRilUNbyYCRLBmgQngRcrThmbyQOEHyohlBcbHmXXdmlldw=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('wujEnGZrttVmZkaeMKjnqlWEbYGPwjmbmuWPaPHfWGgRODlqOxTtMKEdmlldw=='),
     Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('WWvwhaMSrydIqaLzCnIYUYmAGrKgccWfGvVSjEBDapJSNdBrLgAXiSuVGFyZ2V0Vmlldw=='),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('nTCCjOcVNwhSCHbytISlLJWASpWXgxMDhNjfvjwgEzPWUgFwWZKRxtxVGFyZ2V0Vmlldw=='),
     Callback = function(v)
         TargetViewEnabled = v
         if v and Target then startViewing(Target) end
@@ -659,70 +672,33 @@ TargetAimSection:Toggle({
 })
 
 TargetAimSection:Dropdown({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('FzOJGNSNvOaKYFBekIiSCBRQwvcydGuKuZGSATXFnugZaQPKMFJDVkqSGl0IFBhcnQ='),
-    Default = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('jeJDKbSwZOVRhozRdsKEJyVMRXdZrYutewGIYgITaNDuRMyoapLDWzwSGVhZA=='),
-    Items = {RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ZsKCDskguTYtjbRLvaMeAhsccNnxduoqjMehqTSuXLAGFGHnzwIXBvrSGVhZA=='),RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('yLhqHsDgzKctVxWRjKrnodpsAughTNbhsaICBpAQFsDQTXeGJwGOMNdSHVtYW5vaWRSb290UGFydA=='),RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('WpAMmGWVbAzUlbsKSpZhryUCzCuVnTeKgOxaHGZLAaXdIjjUuqiFeUwVXBwZXJUb3Jzbw==')},
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('vLbdRLYmNfFoiwUbHqIKViZKcbHmBIwBeEzyQojCeGDOEZHLJghkNCeSGl0IFBhcnQ='),
+    Default = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('ZLHQMFYBYaXEgisPYtodjwqpKsmSquWjacKZYfdvDOiPlMCLCeSltPbSGVhZA=='),
+    Items = {VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('SSSKZWFiALTzmrfeMOCFKjAospzoSKFhPjvlJREEvXELIpeXkJzgFmpSGVhZA=='),VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fApGIUVKgEzqCGBLzduDKZzzPZdOCnfNqSPIlseXuzpQGUOZYpBjjUZSHVtYW5vaWRSb290UGFydA=='),VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('MeRxxWTktWgEIBFQikLqquUeSCnTTqtTWxhQEbdAKRXrUmKZyKcljWlVXBwZXJUb3Jzbw==')},
     Callback = function(v) TargetPart = v end
 })
 
 TargetAimSection:Slider({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('zUaMfsZNAYqOdrvhNLdtNCleTPguWamJEJjkZzSbUBhwzQGcctNcxBWUHJlZGljdGlvbg=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('MdvhpCrpDaoMmlpykgrJubfpYkrcXuWLwNVTIDdKWszSKqQiKRiLLSuUHJlZGljdGlvbg=='),
     Min = 0, Max = 19, Default = 10,
-    Suffix = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('pwgZRvwLVvQjVKSVOCCLebysICkAfPLPqTMBomgBhtEZGrXTARyqaMWJQ=='),
+    Suffix = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('gUplVrifIkQPFhUvdGSPLKhemByMNKLkvESshCVxCRbfsNEcbJHAnteJQ=='),
     Callback = function(v) LeadStrength = v/100 end
 })
 
 --=====================================================================
--- UI: WEAPON HACK
+-- UI: WEAPON HACK (Combat - Right)
 --=====================================================================
 
-local WeaponSection = CombatTab:Section({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('HOtsOcnabWYpcDuOruJuuAASkwlumezkmGLVoFbRbZnWFhGHOUIcVOyV2VhcG9uIEhhY2s='), Side = 2})
+local WeaponSection = CombatTab:Section({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('qZyGNdYgZsFlLkKyElJzzOEJVPkDTMonoVTcdNhQJJBACHsFvjeeLRQV2VhcG9uIEhhY2s='), Side = 2})
 
 WeaponSection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('IAxkFTwYAHIumNeFrXJtKbhEdudZnYnrWjptqpInGePGIZZLjxJhhnUVGVhbSBDaGVjaw=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('jKdrIuRNsDixALWPToXfbrZGbMzDqokpLCERKKgcwgrNuJOMOoEFbsgUmFwaWQgRmlyZQ=='),
     Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('udCcSbOwtXIdFndmSBtxgSynVaAsOJllpkXBcblGirGnCpVSTitqgFNVGVhbUNoZWNr'),
-    Callback = function(v)
-        TeamCheckEnabled = v
-        Library:Notification(v and RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('yBUaIcNQxwACQCuAOoYzTHdElVnzXQreXHTCJQedtcHgwlXApCNhcsFVGVhbSBDaGVjazogT04gKElnbm9yZSBUZWFtbWF0ZXMp') or RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('kdNfZttUWqRnChvIcalAoVRkFpcnqcTPOdLRIXqtenzTAZbpfFEkyvxVGVhbSBDaGVjazogT0ZGIChUYXJnZXQgRXZlcnlvbmUp'), 2, v and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,150,0))
-    end
-})
-
-local PlayerDropdown = nil
-local function UpdatePlayerDropdown()
-    local names = {}
-    for _, plr in ipairs(Players:GetPlayers()) do
-        if plr ~= LocalPlayer then
-            table.insert(names, plr.Name)
-        end
-    end
-    if PlayerDropdown then
-        PlayerDropdown:Refresh(names, true)
-    end
-end
-
-PlayerDropdown = WeaponSection:Dropdown({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('PkOLHoapTOVAGsKJZQECxUWcjnVMgcQVjUdcKPyKeqDCAKPmoAQBwEQSWdub3JlIFBsYXllcg=='),
-    Items = {},
-    Default = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('SnaRZUYQVCSukJLVBDOwdOrzlTTTNsnYQqvclzlwOIltPIoBmlDdpbYTm9uZQ=='),
-    Callback = function(name)
-        IgnoredPlayer = Players:FindFirstChild(name)
-        Library:Notification(IgnoredPlayer and (RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('mVRBmiETVEakSpXYLeQxruVuYLkbEMdMnGFsxlHGyXMLdIkhmxgZFtWSWdub3Jpbmc6IA==') .. name) or RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('LpahfkusPwBPmwpCEJkLvnLNIMwmvdGhqLNEzMCorMowrguVfGUSGWuTm8gcGxheWVyIGlnbm9yZWQ='), 2, Color3.fromRGB(255,200,0))
-    end
-})
-
-UpdatePlayerDropdown()
-Players.PlayerAdded:Connect(UpdatePlayerDropdown)
-Players.PlayerRemoving:Connect(UpdatePlayerDropdown)
-
-WeaponSection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('gXhqaBouJMvzzuDkpmcXZHZSZEwWQYtyzzmpllJZzJzDkvOFyzXEaxhUmFwaWQgRmlyZQ=='),
-    Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('wLibfLCrKQLYkwQLemIDJBEktdAIxlsRdIjhJkVMaKcjNdieGaEfZgjUmFwaWRGaXJl'),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fNogfGqBlRugMdSKVlfJXmsvTolbzSSWmGIXApnHsXdVGjaBSUQAUXjUmFwaWRGaXJl'),
     Callback = function(v)
         if v then 
             enableRapidFire()
-            Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('bNcZXyTMuLHhVlfRiNovSvmADttQfzoUZdLdkwjCtyBTSKoGKtCtWJxUmFwaWQgRmlyZSBFTkFCTEVE'), 2, Color3.fromRGB(0,255,0))
+            Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('iSEkdMzXilvvDgvzROJtzLyAHhnCVQDCfkQHzbprsxckjZiYbVWXkxVUmFwaWQgRmlyZSBFTkFCTEVE'), 2, Color3.fromRGB(0,255,0))
         else 
             disableRapidFire()
         end
@@ -730,14 +706,14 @@ WeaponSection:Toggle({
 })
 
 WeaponSection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('VdbcWnNWIiflFhZbdKMjTCcwUcNYskkSNMYbalqkGzmqtkkuRlpBNVWVGFyZ2V0IEFsbA=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('UlaZIlUYcitWDYQhEMmNLRqxxypBBhtudDBrIClGwdXAsSfOHtAKWhuVGFyZ2V0IEFsbA=='),
     Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ALlgyFzhMraeJIERtITfJsfyZzHiSisjTvQgMJdcSfkKFVziMOECacGVGFyZ2V0QWxs'),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('vyzNyBvrOZPWtxHcfDYyTmofvmxQYGGVKPHevJYejKCcDdgqmoUWGRhVGFyZ2V0QWxs'),
     Callback = function(v)
         TargetAllEnabled = v
         if v then
             startTargetAllRapidFire()
-            Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('RTcOZbIEcAemMnvWNilHSBjRKAMcVdXwCryWttHCUMLesoBAbeBSLxFVGFyZ2V0IEFsbCBFTkFCTEVE'), 2, Color3.fromRGB(0,255,0))
+            Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('brUdOslcQDxgKgelFGHioAHIApcdBUiRZgRiuBcXObFXYRMpuoWxkjaVGFyZ2V0IEFsbCBFTkFCTEVE'), 2, Color3.fromRGB(0,255,0))
         else
             stopTargetAllRapidFire()
         end
@@ -745,22 +721,22 @@ WeaponSection:Toggle({
 })
 
 --=====================================================================
--- VISUAL: NAME ESP
+-- UI: NAME ESP (Visual - Left)
 --=====================================================================
 
-local ESPSection = VisualTab:Section({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('tQjDJsIMywCNJKUtMOcjaNfZhcOeyRHMbRPUpxwTuNBDRNahzNxGeAMTmFtZSBFU1A='), Side = 1})
+local ESPSection = VisualTab:Section({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('kyRxZmqPjvBzrFYmMmPGvTWFGeNgFYXSEvutUCVrPgWhcsfpSQbbwqvTmFtZSBFU1A='), Side = 1})
 
 ESPSection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('nkqFRcebtsNRCdhQnTMXpmiFvbvsrXKffYCCGKYIQjeOacYnUSIJyNBTmFtZSBFU1A='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('cHCjKURLDVeaAGFHJPLKltqAkJYirNGnTTAsZJttvcQIaqYwIETpoGqTmFtZSBFU1A='),
     Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ZcmHEGDkhKuYtHRIasJBPJDvcgFYeGCwKSgOCCpOirmcKXmmqfsPcAqTmFtZUVTUA=='),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('BGoTvTNUqWkzIUvhvozJKyeiJIprKLgLIVBIlkIjmbxxTNpWRAgLBOeTmFtZUVTUA=='),
     Callback = function(v)
         ESPEnabled = v
         if v then
             if not ESPConnection then
                 ESPConnection = RunService.RenderStepped:Connect(updateNameESP)
             end
-            Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('KENFlVeavNXlJgWQAkcCPKqiiUDYczDgcJcjGqcbivmXafXMoVtvLYXTmFtZSBFU1AgRU5BQkxFRA=='), 2, Color3.fromRGB(0,255,0))
+            Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('rXqrqmwlWFnIZpWDtefsNFEQloMAJmuQsARdtbpKzWYePnKxoxZnNnxTmFtZSBFU1AgRU5BQkxFRA=='), 2, Color3.fromRGB(0,255,0))
         else
             if ESPConnection then
                 ESPConnection:Disconnect()
@@ -769,15 +745,15 @@ ESPSection:Toggle({
             for _, text in pairs(ESPCache) do
                 text.Visible = false
             end
-            Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('CxvQRmQIPkGZQtxhwSBmbvwuoyNQTspfahDMatVzvSFatAYstpWbzUDTmFtZSBFU1AgRElTQUJMRUQ='), 2, Color3.fromRGB(255,100,100))
+            Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('UAbqrWHPKbFzjXDdGZtqIgnyfcLdVFBFBdrtOAIXmBYCHbwHAPNWoWUTmFtZSBFU1AgRElTQUJMRUQ='), 2, Color3.fromRGB(255,100,100))
         end
     end
 })
 
-local ColorpickerLabel = ESPSection:Label(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('JkzLLAkOtedeaGwExTyZYEnTdrjNhnEwJPgMlxnYQwnNVlKCHXBCuEKTmFtZSBDb2xvcg=='), RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ngcxVALciCXAkqhKUoTgXbheDEfjZdKVbpJVFXIxQgMXtpUJTognJijTGVmdA=='))
+local ColorpickerLabel = ESPSection:Label(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('yiCWEkPxTaUHYUSjMXjzWTFliWArzffLLEvmhFqpUKwjTsNEDjzsojTTmFtZSBDb2xvcg=='), VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HqtbuOedFTOSLIZvpyPFxHLwIiwnsZYnSLxLPyghvdXlrBtnVkXWbOFTGVmdA=='))
 ColorpickerLabel:Colorpicker({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('FpcEPQgzvlKMHeyvdiRKURXfsInrLOhjLuZPCjdqXlFKWnpQQfiopNTTmFtZSBDb2xvcg=='),
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('DvwrZTnDWuUuwYFNBqYYXbdxYsVtJjjGjEsezwpaIZqJBJcwWoVmaxbTmFtZUVTUENvbG9y'),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('hIAZvHYHOAGvSQEhnUlNyECEagFTmiHnEplhYpchzuRJKkwFhVjKpNCTmFtZSBDb2xvcg=='),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('FUzftwPyVbDVrfVNAfYSABMMnHNxumSWWfkUHHxdOVgHBjHchZGXnQETmFtZUVTUENvbG9y'),
     Default = Color3.fromRGB(255, 255, 255),
     Callback = function(Value, Alpha)
         ESPColor = Value
@@ -785,34 +761,34 @@ ColorpickerLabel:Colorpicker({
 })
 
 --=====================================================================
--- VISUAL: FOV CHANGER
+-- UI: FOV CHANGER (Visual - Right)
 --=====================================================================
 
-local FOVSection = VisualTab:Section({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ZkNKWQBnZUIEKNOSlFuppOvrziwyoVOWYutaPRjOwASCJcnyJVFuzLQRk9WIENoYW5nZXI='), Side = 2})
+local FOVSection = VisualTab:Section({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('pdEkGPiyfmCrHaRsNErkuGxLTjkzfQftJQCIXzsEWgzaaHOnXqRYtSqRk9WIENoYW5nZXI='), Side = 2})
 
 FOVSection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('jOwuldTOwQjUVzHqMCIPVjBxYyrHARhrcTadnzEMvmbVLUEwZZaXYhKRk9WIENoYW5nZXI='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('xvaFJbfdxgdIPUcmpAoVsmrASOTrrYTVvXzsrvBgILxhxpSxbQFoppNRk9WIENoYW5nZXI='),
     Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('QQaTRNfjfBhgIWtbPqWYHdwsGbhqIzRkjsClmaweKnXMVoZecKjthxLRk9WQ2hhbmdlcg=='),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('aygiNodbroqRYlSObYelWCewKHYlEvkWfKUGNEhXnVgYnQKtXSrXmDgRk9WQ2hhbmdlcg=='),
     Callback = function(v)
         FOVEnabled = v
         if v then
             enableFOVChanger()
-            Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('eTdmepaMnLRkoYajXmCIMxagoagzGjybTTpjELFLyAynggkkULwgPLMRk9WIENoYW5nZXIgRU5BQkxFRA=='), 2, Color3.fromRGB(0,255,0))
+            Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('jEyJEbydoSclhkgLZfotYRkfWgVzIXKqsDkhbafrPVMveyNvQBsoTugRk9WIENoYW5nZXIgRU5BQkxFRA=='), 2, Color3.fromRGB(0,255,0))
         else
             disableFOVChanger()
-            Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('IQUnAvAKAKgYmIFwPXVZIhMrbYtgJPJATbCEdGJpPbIdHtHxRYuxNnjRk9WIENoYW5nZXIgRElTQUJMRUQ='), 2, Color3.fromRGB(255,100,100))
+            Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('UJJxrtdajxWtHTtCNfQXqGyWqCinOghEjmWvKSvWdEcptgoWyBodroCRk9WIENoYW5nZXIgRElTQUJMRUQ='), 2, Color3.fromRGB(255,100,100))
         end
     end
 })
 
 FOVSection:Slider({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('gXcMFlIJlVhTdqMkZHoKeekNbQKINlBTDUPKAslEHUyDiCMtoDXZSxJRk9WIFZhbHVl'),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('tUuxLqjNAuVsxzuEJiHQtgqhtUHpLFysMDCSZcHAWgwCGRcVbbQUmGoRk9WIFZhbHVl'),
     Min = 0,
     Max = 120,
     Default = 80,
-    Suffix = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('nKvvohCkSoDuBRzHoBiGEqsQDhKxDjlfZJnsUGreSPWwmrrGYWBLCxm'),
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('vQTivZSqtHKBBRiYcTxAGUqRjutZdYTigtoUnergFFnzsPRkXXJOdAVRk9WVmFsdWU='),
+    Suffix = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HrEdYlyrgUJDOscENDaTsCJpVecHtSNoghxmWafUOBKmWJxwcrHILxr'),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('UUVPeycAMdxdCmCxKiEnDqZIoyBhnswyUEmZJhNceGPKXGsMoJQarUqRk9WVmFsdWU='),
     Callback = function(v)
         TargetFOV = v
         if FOVEnabled then
@@ -822,24 +798,24 @@ FOVSection:Slider({
 })
 
 --=====================================================================
--- MOVEMENT: TP WALK
+-- UI: TP WALK (Movement - Left)
 --=====================================================================
 
-local TPWalkSection = MovementTab:Section({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('FxCkzhtQJIakiVnIypgWvfJObmfPHGEnkOaQgstcqdOxhJvpYhCrOHrVFAgV2Fsaw=='), Side = 1})
+local TPWalkSection = MovementTab:Section({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('vJABQcgpeAfpDPdUiMNPrXKvvHCVBcoFDfmBiVMHBwCLiYhoRAKFIAvVFAgV2Fsaw=='), Side = 1})
 
 TPWalkSection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('PcNPYmLKXcRSCWfETHDjUNOnBtsIfdYqMWFTdwmwRFjWEqhnsXgCBpqVFAgV2Fsaw=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('FnibAfnzJtPSCydIMRySUjxaaeLHqATTDSpiHkAzWxJAPzJXBXtfTQwVFAgV2Fsaw=='),
     Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('AiDnPmUictPRIjjUeGjYlLqxEmYWlgiOixhnQocnydnLPImokVBqUiWVFBXYWxrVG9nZ2xl'),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('APvkUgoixaTtuHAOAoMdshaFCnyxgOWSjWIdqcCqMTWkURxbXOwuOlMVFBXYWxrVG9nZ2xl'),
     Callback = function(v)
         tpKeybindEnabled = v
         if not v then tpKeybindActive = false end
-        Library:Notification(v and RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('gFSYYrYrlIEMcgvwwCwyQJNiTstYQPmoEOEYjlDLgdgVAfEfDfsYgDNVFAgV2FsayBFbmFibGVkIChaKQ==') or RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('iGnbiiZbgiSeJZgsLVooHHHVqJhxSDiJAumIwzqZocdHNnuHCMIBCgtVFAgV2FsayBEaXNhYmxlZA=='), 2, v and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,100,100))
+        Library:Notification(v and VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fLzEbiZdQDYsGpoTIBrTAbavIpLaRQvXrEQvTxLWuDjlTYqlORMxUGrVFAgV2FsayBFbmFibGVkIChaKQ==') or VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('QhlrAJGAoyotxjdsMRgBStNKsppwGyjeFodVgUYfapjHpvXsWdLYRUUVFAgV2FsayBEaXNhYmxlZA=='), 2, v and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,100,100))
     end
 })
 
 TPWalkSection:Slider({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('fTttmPLAvGVsFyLQSIvGunkFuCBQrxATdLtcHoChpaxcgdRVbyXLsQRVFAgV2FsayBTcGVlZA=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('EuyUsVjREOdwadIQyLlsZHcnGpEuejmsGDJYRAfgYmDuimDgiTFZEXyVFAgV2FsayBTcGVlZA=='),
     Min = 0,
     Max = 100,
     Default = 16,
@@ -849,30 +825,30 @@ TPWalkSection:Slider({
     end
 })
 
-TPWalkSection:Label(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('cLfzNlwgNIKbFPFNglEnlnavTcRrGhIcoLnJUHPTcpZvAAcTctyppebUHJlc3MgWiB0byB0b2dnbGU='), RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('SQGnYfCwsUtvdCNcJHgVNEAHWylYQboSslmXWZFCLVOVdcEkiZggwAKTGVmdA=='))
+TPWalkSection:Label(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('CFiigNgVfcgoiacncuMrIEyTzMrNiRnWmDmSgBeFvTwEogLFtUeIKtTUHJlc3MgWiB0byB0b2dnbGU='), VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('TQIUnijTGEQhMrOWxNgCJVNJDYtGBLAVJJRsYgALYqfxlKmwgymOLYwTGVmdA=='))
 
 --=====================================================================
--- MOVEMENT: FLY
+-- UI: FLY (Movement - Right)
 --=====================================================================
 
-local FlySection = MovementTab:Section({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('duOlsCTuegFlgqNFyTeTirSUeZzUwSzjXGwFxohFnpREalIhrxIXIFmQ0ZyYW1lIEZseQ=='), Side = 2})
+local FlySection = MovementTab:Section({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('dvFCXxkqKSrcGqPsekAVCpJnyzMyArgldaPxsIMBMwaXBfVmFxwvVDDQ0ZyYW1lIEZseQ=='), Side = 2})
 
 FlySection:Toggle({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('TBRPgoeiNMLGBCdAgxCiaXTCULBQcTziyStBVnVYXSJqvEMIyRgpLNqRmx5'),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('uHtslDqCYsioRBdodtuXuimUuJMfYEOYtRuFoalGISmtvEWzuXZXdlJRmx5'),
     Default = false,
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('YriGckApGuvywKNQvgPoIaDCFCrOGvkxbtyTJOcUdLwKfsAKVArPKHURmx5VG9nZ2xl'),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('CebdyNbjPWqHanPtLGqncVgbvGzFkyFQExwOrVofGkLXvFnAZDlgLjfRmx5VG9nZ2xl'),
     Callback = function(v)
         flyKeybindEnabled = v
         if not v then
             flyKeybindActive = false
             stopFlying()
         end
-        Library:Notification(v and RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('rrgoXQwdBvIpHtKosnMtEynWqCqTIQLBRYhdJJGwdoFjzlGFYKdvijNRmx5IEVuYWJsZWQgKEYp') or RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('TgMBqwtvgogRsszdpSIevIUMQBlKuoepexYCFelnOwyTyUgEkfHvIFVRmx5IERpc2FibGVk'), 2, v and Color3.fromRGB(0,255,255) or Color3.fromRGB(255,100,100))
+        Library:Notification(v and VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('RhxsLLjqegOILZflkkAEMbnrygGjTjUszRWdnaNSUuYfJvQmCJlWArqRmx5IEVuYWJsZWQgKEYp') or VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HEGyYZQZMUVWbFwcwmgPajUXNSHbSwsMfkzUcQXITgdjFOjYALpfDwFRmx5IERpc2FibGVk'), 2, v and Color3.fromRGB(0,255,255) or Color3.fromRGB(255,100,100))
     end
 })
 
 FlySection:Slider({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ZyqEHYGiYKsETGIyyCwOwcvNrDUJtDJWdFwuYiQVqDgNNAeUONMqfSuRmx5IFNwZWVk'),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('mKBGmXNVvOsKrEuZLzrlrSDLUKeCjGUZaavcVJqvOKxElOTKRCqrVdKRmx5IFNwZWVk'),
     Min = 10,
     Max = 200,
     Default = 50,
@@ -882,10 +858,10 @@ FlySection:Slider({
     end
 })
 
-FlySection:Label(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('OOuGHIoWmzKppmnHNjaOmEQWZwKBLkILLHXFQIwHqelpjpFdHkqJVDHUHJlc3MgRiB0byB0b2dnbGU='), RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('IgboGcvbgJHVNSGXuHzbxKjuTCivlZSFWHGIIJUAgArpVyPFSTnhvGbTGVmdA=='))
+FlySection:Label(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fZoUZwAkmKlgzxMtcdEXCdPrWYSvCscoHyTWkBJzinxIJSuKpXotvcNUHJlc3MgRiB0byB0b2dnbGU='), VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('SBjUbRHOolThnPeEruTNdkwIBifPdbxShnOOMBSwiBsrUqzNOdeYHZSTGVmdA=='))
 
 --=====================================================================
--- KEYBINDS
+-- KEYBINDS: Z = TP Walk, F = Fly
 --=====================================================================
 
 UserInputService.InputBegan:Connect(function(input, gp)
@@ -893,7 +869,7 @@ UserInputService.InputBegan:Connect(function(input, gp)
     if input.KeyCode == Enum.KeyCode.Z then
         if tpKeybindEnabled then
             tpKeybindActive = not tpKeybindActive
-            Library:Notification(tpKeybindActive and RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('cHmeaUtQkCmnHrVycyDjWqpFlzqninffJVGjsjhXrSEJauIffnROEOTVFAgV2FsayBPTiAoWik=') or RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('smnKNNImSRVvIhdVrGczjNTXLfdyUKfnamEdEmwUbVjQUTxkRCqtZdqVFAgV2FsayBPRkYgKFop'), 2, tpKeybindActive and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,100,100))
+            Library:Notification(tpKeybindActive and VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('RYQOCIwPIWdgrCuekizuOhkBKftcnvyaFNOJDbTCLMdBGJtCMdHhyhMVFAgV2FsayBPTiAoWik=') or VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('NwjmuZcvHmZGnGMgzVXJaECrVmDTCJKIJiXYySmeDCSZhabyhJYiEAGVFAgV2FsayBPRkYgKFop'), 2, tpKeybindActive and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,100,100))
         end
     elseif input.KeyCode == Enum.KeyCode.F then
         if flyKeybindEnabled then
@@ -904,11 +880,12 @@ UserInputService.InputBegan:Connect(function(input, gp)
                 stopFlying()
             end
         else
-            Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('xWKpTczJzWbzRgOtgawvzaAXACpIXShRgwoeimRvfOKCiMcWDHjoIZZRW5hYmxlIEZseSBpbiBVSSBmaXJzdCE='), 2, Color3.fromRGB(255,150,0))
+            Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('lOHLNPmCdIsEbVAUzSrEciNHoUOSBCAWBcroXgURYfseuqujYjntmoZRW5hYmxlIEZseSBpbiBVSSBmaXJzdCE='), 2, Color3.fromRGB(255,150,0))
         end
     end
 end)
 
+-- Respawn Support
 LocalPlayer.CharacterAdded:Connect(function()
     task.wait(0.5)
     if flyKeybindActive then startFlying() end
@@ -920,16 +897,16 @@ end)
 
 LocalPlayer.CharacterAdded:Connect(function()
     task.wait(1)
-    if Library.Flags[RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('rbspcQxVAqebEVfgTUHZrusYbIKsNodwXWrxzgGjdXvtYFejTdYsAfYUmFwaWRGaXJl')] then enableRapidFire() end
-    if Library.Flags[RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('GwexDBoImINvnhtjSZhFCXhwZUMlfLlzKmLPPxgjSGbwmERjGzvhUldVGFyZ2V0QWxs')] then startTargetAllRapidFire() end
+    if Library.Flags[VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('YTLRQeXCFHRrxasKDblWkeocotLKBvFkmaVDpRzoKpIrLKrMQBvLzBPUmFwaWRGaXJl')] then enableRapidFire() end
+    if Library.Flags[VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('nLMwWzUXrggufhsparkRPnnVeAQxjBVawvnCOAADLTYAHzwaVGbUpKOVGFyZ2V0QWxs')] then startTargetAllRapidFire() end
 end)
 
 LocalPlayer.Backpack.ChildAdded:Connect(function(obj)
     if GUN_NAMES[obj.Name] then
         task.spawn(function()
             task.wait(0.2)
-            if Library.Flags[RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('JhjlklNmupJCPOlDLdADRPTwhQBXIeQNIsDcBgUYULMqQRKhnFXzOFWUmFwaWRGaXJl')] then enableRapidFire() end
-            if Library.Flags[RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('dBFTfPzKiePLKuIbGYnRLjvSSpvRyddgQtLcDBsgQHoSUjvDYYTmWGeVGFyZ2V0QWxs')] then startTargetAllRapidFire() end
+            if Library.Flags[VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HEXapIJTlylEjXYfgwZdNLQQERYKCdCUOqlZNJMbIHiwUVfKVjkZcuJUmFwaWRGaXJl')] then enableRapidFire() end
+            if Library.Flags[VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('qylAeOmXFFqGrbkhIvFwYQpNDfCBhvHCLYzpTdWMWVcBszjhwNryQUHVGFyZ2V0QWxs')] then startTargetAllRapidFire() end
         end)
     end
 end)
@@ -937,10 +914,10 @@ end)
 task.spawn(function()
     task.wait(2)
     if LocalPlayer.Character then
-        for _, c in ipairs(LocalPlayer.Character:GetChildren()) do
+        for _,c in ipairs(LocalPlayer.Character:GetChildren()) do
             if GUN_NAMES[c.Name] then
-                if Library.Flags[RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('tGvRsDnUWtfdUlpQvOSIiDDhmmfosbYQZiNZEBqXheXsxQkJwzoNUFbUmFwaWRGaXJl')] then enableRapidFire() end
-                if Library.Flags[RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ELMoEjfEcbgjZJHXmUrRmHNVdJysRAQInpnaaEUAeHDIivLNWLpTbPtVGFyZ2V0QWxs')] then startTargetAllRapidFire() end
+                if Library.Flags[VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('wgvcmetfNUAkovIXDtZncQaTLPrRSfzzMPcNNObaCGoFQrRjdvgqBhOUmFwaWRGaXJl')] then enableRapidFire() end
+                if Library.Flags[VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('KSCxkEVlGilUOgcpDFEwsBslFzjsIXbkbnyIoxTcKxZQeMsWhAXDRpnVGFyZ2V0QWxs')] then startTargetAllRapidFire() end
                 break
             end
         end
@@ -948,23 +925,24 @@ task.spawn(function()
 end)
 
 --=====================================================================
--- SETTINGS: THEMES + CONFIGS
+-- SETTINGS: THEMES + CONFIGS (FULLY RESTORED)
 --=====================================================================
 
-local ThemesSection = SettingsTab:Section({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('vKzaLxkGBRqgctUNBuQCBDsrJEHIKuYBRNqnpttxmrjHAFJRvrAfskPVGhlbWVz'), Side = 1})
-local ConfigsSection = SettingsTab:Section({Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('TUNymnhaMQLPuNvYXdoKHNMtcZFNJtVgbaYYvWLkUuUBgFDwmxEQTUlQ29uZmlncw=='), Side = 2})
+local ThemesSection = SettingsTab:Section({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('embgVNyvVAbsZrZZsQGxNPmCKIxpKgjykQqZHblOnhpfSrxFyvkMEsrVGhlbWVz'), Side = 1})
+local ConfigsSection = SettingsTab:Section({Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('OOEUmZPHrBGgZntkedVMeXadOBdZdulaNbJyjYeoroGEwlkiLeVCRBHQ29uZmlncw=='), Side = 2})
 
+-- Themes
 for Index, Value in Library.Theme do
-    Library.ThemeColorpickers[Index] = ThemesSection:Label(Index, RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('aPPMjBeYjzlzOGoUDEtMarqtiwqxXDXkkOhmhVJWNMDSxrguxBsFVQnTGVmdA==')):Colorpicker({
-        Name = Index, Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('vMLsLbXqQhrsirKRwJVSJggcponBcmOwvrpfJlmWvWaseQoGcAbaIxaVGhlbWU=')..Index, Default = Value,
+    Library.ThemeColorpickers[Index] = ThemesSection:Label(Index, VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('lDMDXufZqhVVkYywjfFoEhgroolUZqlQaBJdvdWEcxdcJYyIChUfXprTGVmdA==')):Colorpicker({
+        Name = Index, Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('mTdApuyUUhQXJUFzOBnAKkFwHzQRuhcNIWtiToRxzGkUFdynxHCVGQFVGhlbWU=')..Index, Default = Value,
         Callback = function(v) Library.Theme[Index] = v Library:ChangeTheme(Index, v) end
     })
 end
 
 ThemesSection:Dropdown({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('UccJlUtOGNwpHKwnQxuCuaXqvbeUKMLmCNJGLSYHzOELgdTJWlGigEvUHJlc2V0IFRoZW1lcw=='),
-    Items = {RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('kFYOauZreyvoIuyIcUGLRXXvkgDamGMAzDfruzqASVWKyMNVZgqhlGvRGVmYXVsdA=='), RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('nhDiijfFHHImsJxIPQBVcMLTyoPFMAQhSZQDsDuIhugDWVHwOOYlIqaQml0Y2hib3Q='), RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('vyLnPXbCJRwZOfIgGJgiPZFhwTroOIWmfZUbqiBfCcqyVARmwwkHGpDT25ldGFw'), RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('uyZLThSsNIzZblFWUcyykLkKvDHBMXeXwRkaTgPuKcnJwdQPeSnlYFkQXF1YQ==')},
-    Default = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('psLZLyDNhcQvIcDgzOdDngHvaYQSwxiaZyzzUxFWauMHoXvWZDmSPmrRGVmYXVsdA=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('fZgNKUYgczUjVtVbRFOsYDXsGtSRjXPBoIcHOsMSmMRpVjttymcTgVcUHJlc2V0IFRoZW1lcw=='),
+    Items = {VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HlMZtMYnWRvwWdEprOZiQdJvPNvqLiEWucbmFknrjLekkQSqGXBybWFRGVmYXVsdA=='), VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HZqSbnQpkNrZdCbkaEBjgneZQveRtcOKzEHRLqvwMFTpPXNWoxHwtDNQml0Y2hib3Q='), VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('erfcvRbYRjLoTloVRrbRcVbpJuskIgzRAGOcJTHXeisMrYYznqfMCchT25ldGFw'), VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('PvuEhNkcathDUFTuFuTXyDphseYMACZWWBrSAGIJjbKVrzIyJjasyBSQXF1YQ==')},
+    Default = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('BfQJUpVQjqulcfNttwiuhxOuwmeACnGOgKwJEcuWnxxUEADpkXIrVjxRGVmYXVsdA=='),
     Callback = function(Value)
         local ThemeData = Library.Themes[Value]
         if not ThemeData then return end
@@ -978,59 +956,60 @@ ThemesSection:Dropdown({
     end
 })
 
+-- Configs
 local ConfigName, SelectedConfig
-local ConfigsListbox = ConfigsSection:Listbox({ Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('MvfDohevCIfPpDUYgcMBOYVGIGhWDVVIWqaSeSVGlMlyTdrGSRIWjugQ29uZmlnIExpc3Q='), Items = {}, Callback = function(v) SelectedConfig = v end })
-ConfigsSection:Textbox({ Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('wMJcNHcCKdKHzOxxFWewinUiyibfYZTGOBsCrdsgpMZRkJLUtsuSXmlQ29uZmlnIE5hbWU='), Placeholder = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('yDFTvdDQUYqncfoyZdtDJiJXONuWEcitjtDTPnQBZaCMBTJVIeXDZGBRW50ZXIgbmFtZS4uLg=='), Callback = function(v) ConfigName = v end })
+local ConfigsListbox = ConfigsSection:Listbox({ Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('IJuEXduGhvlYzdmGlBEJHMRrWrDLRiZKbavlGSUWFAcSsfScXMEURIXQ29uZmlnIExpc3Q='), Items = {}, Callback = function(v) SelectedConfig = v end })
+ConfigsSection:Textbox({ Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('GtlsMGgDqzWwTTKOtTnoqnNqJkjbbzSgjwMoDmcQHXoMknwOvAzaoebQ29uZmlnIE5hbWU='), Placeholder = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('RFlpnsDFISWoclgpzCkJHHHSgWnIyqOrfTXnQAmAKIVJEariAehOTvdRW50ZXIgbmFtZS4uLg=='), Callback = function(v) ConfigName = v end })
 
 ConfigsSection:Button({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('KTJsslenjlAcwjBnLuohsyPgVaBwdaMzytfrPbZOzPDreXxKinJweSLQ3JlYXRlIENvbmZpZw=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('xTbXOVjBbAkCfIcSCcToEWambmVcDNrRPsvorqdIXTbUWEKjKUNxBDiQ3JlYXRlIENvbmZpZw=='),
     Callback = function()
-        if not ConfigName or ConfigName == RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('UHNEDejbVLYiFXafNWIQretmgCPpsneHwemLjgxayIyTxJGbZNKONKP') then return end
+        if not ConfigName or ConfigName == VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('xyYxfLYBUkkwqUHJJOyurrBHdOiEDOIEVzCMwGmAoHVdWOyiUkuBjpo') then return end
         pcall(function()
-            if not isfile(Library.Folders.Configs .. RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('qbyOwsFrsJnyhcvrSjxPkqbgjImYjccXTpPjEbGDFVTEvHPBMEFNipgXFw=') .. ConfigName .. RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('pBKLfYNoKrzYYNuDADAeszAXYdyDSWHGuLFObHjpbPdmtNImguTCqPeLmpzb24=')) then
-                writefile(Library.Folders.Configs .. RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('bYSxBMUdrFhZeBifTrgBmSbMjeVOCbXtrcxoGiOVXephELcbFmSkWIUXFw=') .. ConfigName .. RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('npKiDLoZJDpjSauwIJeJiHgrxaYrzAUFPRCItMHENjCfBHbJuExRbuvLmpzb24='), Library:GetConfig())
+            if not isfile(Library.Folders.Configs .. VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('KUrBPnOttiiHSCsSFbWFmnUHtTUOqhDsaBERkKgCifyIaLRSfsAcJoqLw==') .. ConfigName .. VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('yIbTcRHiwjEXcypbmHqDcnCQTbndrcBshWrCNWASoVIqBWqGxKccTzMLmpzb24=')) then
+                writefile(Library.Folders.Configs .. VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('mVjyqKXObycJLpIYZKWWoNJsfaYtEWOYKSZmOEhtnPoHTjwORFOGVmDLw==') .. ConfigName .. VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('FbbeKmbCmGWzkbkJeEDdOlyzaypHVjxJrzudKSgVpZhnNAdExxUNtgjLmpzb24='), Library:GetConfig())
                 Library:RefreshConfigsList(ConfigsListbox)
             end
         end)
     end
 }):SubButton({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ZmpHKJTVyAcfPCKilUJxLKjRJKICFQTmNMDQykeboVBLVDoaPtEOvYOTG9hZA=='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('HONhSVZZmcVZjYNboeJeAtLzEbpqRBIcgIBfXVhjHOXxBACmwucJCtBTG9hZA=='),
     Callback = function()
         if SelectedConfig then
-            local ok, data = pcall(readfile, Library.Folders.Configs .. RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('nsXghkpGTUaGyiNseEMPHAsNalDktDLDDRbedbnSOkTgQcKdpuAGmMgXFw=') .. SelectedConfig)
+            local ok, data = pcall(readfile, Library.Folders.Configs .. VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('tXHtNrsNUizMDCtQebSeaJqtTfYQcpqwAJOzyWaKeBZwgeCNEflPhQeLw==') .. SelectedConfig)
             if ok and data then Library:LoadConfig(data) end
         end
     end
 })
 
 ConfigsSection:Button({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('lRCKnJaSraiFOvAGDHzxfpMFfQDtIcSdmboWYqfJYIkUAybRfkgdKOKU2F2ZSBDb25maWc='),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('yxpWkpQRDMbKOIgATmZfUWgmUEwYOrUIlBBRXtOBwRJmAXinFOZbKuvU2F2ZSBDb25maWc='),
     Callback = function()
         if SelectedConfig then pcall(Library.SaveConfig, Library, SelectedConfig) end
     end
 }):SubButton({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('BvhkDsyDwevyIzPoJhpeTRRNcxUvnyYqTRcRePBNrFgZOBdqoXblmAWRGVsZXRl'),
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('QhPvQhMJPQhgEgopwBCIglsQkEbCAKtUnVpJndYMuVvNqhBujRSEKYZRGVsZXRl'),
     Callback = function()
-        if SelectedConfig then 
-            pcall(delfile, Library.Folders.Configs .. RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('TWAwKDAilyFvZtUyRJNZnwYMXqUGftKomDPXwJxbbKyyXelrtrYfHodXFw=') .. SelectedConfig)
-            Library:RefreshConfigsList(ConfigsListbox) 
-        end
+        if SelectedConfig then pcall(delfile, Library.Folders.Configs .. VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('WdmmFRZJzWFHlNhjBljMczCwmUgpcoBhDJRjFVGeuqPyNWDJDGhicFtLw==') .. SelectedConfig); Library:RefreshConfigsList(ConfigsListbox) end
     end
 })
 
-ConfigsSection:Button({ Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('PHDvKybEevwDxYabbKfuFgfJampYyduTCOkaldCNChvipCmpxlXHAlnUmVmcmVzaA=='), Callback = function() Library:RefreshConfigsList(ConfigsListbox) end })
-ConfigsSection:Toggle({ Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('tFjpKcpuXbvGxeyNZVKJSBRQQwdoHnqliPiYhuVFseEVDWpeyzfceyoV2F0ZXJtYXJr'), Default = false, Callback = function(v) Watermark:SetVisibility(v) end })
-ConfigsSection:Toggle({ Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('HrzVFOWouYkmDbvaRRxDgeuArxyUaKNxpvRTeJwGGmGnsjOzNOVrDJES2V5YmluZCBMaXN0'), Default = false, Callback = function(v) KeybindList:SetVisibility(v) end })
+ConfigsSection:Button({ Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('aoLByRhqZkhDStFKWAagMsGTPLBnpHIFAwgUHGDMxChSYHWoorYNGxaUmVmcmVzaA=='), Callback = function() Library:RefreshConfigsList(ConfigsListbox) end })
 
-ConfigsSection:Label(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('LtCMsDhDrzXseltkMaftaTEKRVcdOQouOdzjRemimMzHCOMcfsEVBgGTWVudSBLZXliaW5k'), RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('ctXyydColpDebliINegzuTaakwsBLAQtHCQoyNTQXkdyqJphPdYJVEbTGVmdA==')):Keybind({
-    Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('tFXCbYfqiPKtxSRSxxFoClbqdcDmZgmtLohuPuuHvDgTkmEbdLDfdAiTWVudSBLZXliaW5k'),
-    Flag = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('cvcUXLKpwUoCVBOjVjGgIdgJXofozzikBUxYQqIfOGXtiIHlKfYOnYgTWVudSBLZXliaW5k'),
+-- Toggles (Watermark & Keybind List)
+ConfigsSection:Toggle({ Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('oZtaofqAqaRShfKtKwkewGXafzCpUzwuYEEQrBNyzKjCSIYoCPHWLEZV2F0ZXJtYXJr'), Default = false, Callback = function(v) Watermark:SetVisibility(v) end })
+ConfigsSection:Toggle({ Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('qKvrcruNivvFseyNPHuMNJpgKfNJGmArsiuKdEVZloCXLOchlDSOQWVS2V5YmluZCBMaXN0'), Default = false, Callback = function(v) KeybindList:SetVisibility(v) end })
+
+-- Menu Keybind
+ConfigsSection:Label(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('bKiwZKgGEmMAPvHcmlpHWNMQMyaKXKgQoiiHdoludRBgDiCvUhxXYGQTWVudSBLZXliaW5k'), VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('pdPpxxanSUIhwBZDbbpRIzJkceOSFzhkJfnWuJXSyzhqfJLxxPlCpVzTGVmdA==')):Keybind({
+    Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('wbeVKFsAVhfVRuwaqUeeHrqVqMHSdNimCoiHpRuLgsbPayUVQDIJfVETWVudSBLZXliaW5k'),
+    Flag = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('vCVMNgMraYwmNQHaILoguUCRvLVvmTwLiCssqFIGNiSCsIHUcifsNUITWVudSBLZXliaW5k'),
     Default = Enum.KeyCode.RightControl,
-    Mode = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('izgqQpDckmiamUPRMKFaljXOXwGnbIIXKFSWKFDmRtgHPHdeZhcSeCKVG9nZ2xl'),
-    Callback = function() Library.MenuKeybind = Library.Flags[RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('DclpPYpgPvAzlPymfeaxLsRlvEFYVnHXodPCuuazLKOxKHIbeDJefBXTWVudSBLZXliaW5k')].Key end
+    Mode = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('xQWvZpLGwwbkRnLrTUOuXiEXxghDiqjaVRcXqEhihjzSKvJHozzNgpKVG9nZ2xl'),
+    Callback = function() Library.MenuKeybind = Library.Flags[VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('czelKHLfHXhEtMokDTFKcwRPJBSnvumZtOYivkRBywBjpTXHEtZvaOPTWVudSBLZXliaW5k')].Key end
 })
 
-ConfigsSection:Button({ Name = RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('WXxtCBGnMAEbdlYXxJuURGbsjTTOKfbEJEzsHmrzpIyeafIkMJbTObYVW5sb2Fk'), Callback = function() Library:Unload() end })
+ConfigsSection:Button({ Name = VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('nBrrOhYfUHMemZQLgIdTvMPVTuykPcrRzUSZOdhAoYtoBCTjZflfmtSVW5sb2Fk'), Callback = function() Library:Unload() end })
 
 Library:RefreshConfigsList(ConfigsListbox)
 
@@ -1038,4 +1017,4 @@ Library:RefreshConfigsList(ConfigsListbox)
 -- LOAD NOTIFICATION
 --=====================================================================
 
-Library:Notification(RhJvoNICokYJEpWLmzfgoLjzpcmFfxwXwL('XQCvNsQlqPxicgdKbElcDMvKjpgFSzkiXXXTDIEcAonaTUjtHIDTRtxbG9hZGVk'), 3, Color3.fromRGB(0,255,0))    
+Library:Notification(VQgsDTzeDfLQMFoTVicMsHUMTNWdZsVEYzzXJNNrvrcuahAgaEtZlNnnFHKAlGCjdxRvMFAtbBzfyTwmZUjWBYOVR('knNEDHaShwOmbyricEdiEbIkeoIsayeaLhdHgODqbUZMacYXFltaHbwTE9BREVE'), 3, Color3.fromRGB(0,255,0))    
