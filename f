@@ -47,6 +47,15 @@ local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local Inset = game:GetService("GuiService"):GetGuiInset().Y
 
+
+
+
+
+-- HIT SOUND VARIABLES
+local HitSoundEnabled = false
+local CurrentHitSoundId = "rbxassetid://43534"
+local GunHandler, OriginalShoot = nil, nil
+
 --------------------------------------------------------------------------------
 -- MISC TAB: SEMI GOD MODE (Side 1)
 --------------------------------------------------------------------------------
@@ -189,6 +198,114 @@ FlossSection:Slider({
     end
 })
 
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+-- HIT SOUND + WORKING VOLUME SLIDER
+--------------------------------------------------------------------------------
+local HitSoundSection = MiscTab:Section({Name = "Hit Sound", Side = 1})
+
+local HitSoundEnabled = false
+local CurrentHitSoundId = "rbxassetid://43534"
+local HitSoundVolume = 1
+local GunHandler, OriginalShoot = nil, nil
+
+local HitSoundOptions = {
+    "rust",
+    "neverloose",
+    "cs2",
+    "minecraft",
+    "tf2 (delay)",
+    "osu",
+    "nothing"
+}
+
+local function setupHitSound()
+    if GunHandler then return end
+    local modules = ReplicatedStorage:WaitForChild("Modules")
+    GunHandler = require(modules:WaitForChild("GunHandler"))
+    OriginalShoot = GunHandler.shoot
+
+    GunHandler.shoot = function(args)
+        local hitPos, hitInstance, hitNormal = OriginalShoot(args)
+        if HitSoundEnabled and args.Shooter == LocalPlayer.Character and hitInstance then
+            local character = hitInstance:FindFirstAncestorOfClass("Model")
+            local hitPlayer = character and Players:GetPlayerFromCharacter(character)
+            if hitPlayer and hitPlayer ~= LocalPlayer then
+                local soundPart = Instance.new("Part")
+                soundPart.Anchored = true
+                soundPart.CanCollide = false
+                soundPart.Transparency = 1
+                soundPart.Size = Vector3.new(0.1,0.1,0.1)
+                soundPart.CFrame = CFrame.new(hitPos)
+                soundPart.Parent = workspace
+
+                local sound = Instance.new("Sound")
+                sound.SoundId = CurrentHitSoundId
+                sound.Volume = HitSoundVolume
+                sound.Parent = soundPart
+                sound:Play()
+                game.Debris:AddItem(soundPart, 3)
+            end
+        end
+        return hitPos, hitInstance, hitNormal
+    end
+end
+
+HitSoundSection:Toggle({
+    Name = "Hit Sounds",
+    Default = false,
+    Callback = function(v)
+        HitSoundEnabled = v
+        if v then
+            Library:Notification("Hit Sound ON", 2, Color3.fromRGB(0,255,0))
+            task.spawn(setupHitSound)
+        else
+            Library:Notification("Hit Sound OFF", 2, Color3.fromRGB(255,100,100))
+            if GunHandler and OriginalShoot then
+                GunHandler.shoot = OriginalShoot
+                GunHandler = nil
+            end
+        end
+    end
+})
+
+HitSoundSection:Dropdown({
+    Name = "Select Sound",
+    Items = HitSoundOptions,
+    Default = "Default (43534)",
+    Callback = function(choice)
+        local sounds = {
+            ["rust"] = "rbxassetid://5043539486",
+            ["neverloose"] = "rbxassetid://6607204501",
+            ["cs2"]   = "rbxassetid://18537680989",
+            ["minecraft"] = "rbxassetid://118343739363816",
+            ["tf2"]       = "rbxassetid://2868331684",
+            ["osu"]            = "rbxassetid://7147454322",
+            ["nothing"]              = "rbxassetid://0"
+        }
+        CurrentHitSoundId = sounds[choice] or "rbxassetid://43534"
+    end
+})
+
+-- THE ONE THAT ACTUALLY WORKS
+HitSoundSection:Slider({
+    Name = "Volume",
+    Min = 1,
+    Max = 5,
+    Default = 1,
+    Decimals = 2,
+    Suffix = "",        -- ← THIS LINE FIXES EVERYTHING
+    Callback = function(value)
+        HitSoundVolume = value
+    end
+})
 --------------------------------------------------------------------------------
 -- MISC TAB: SPINBOT (Side 2)
 --------------------------------------------------------------------------------
@@ -477,6 +594,8 @@ local function doRaycast(o, d, r)
     return false, nil, nil, nil
 end
 
+-- REPLACE the entire `fire()` function (around line ~380) with this:
+
 local function fire()
     if not currentTool or not currentTool.Parent then return end
     local handle = currentTool:FindFirstChild("Handle")
@@ -520,6 +639,28 @@ local function fire()
         finalPos = hitPos or (muzzlePos + direction * INF_RANGE)
     end
 
+    -- HIT SOUND FOR RAPID FIRE (before firing)
+    if HitSoundEnabled and finalHitPart then
+        local character = finalHitPart:FindFirstAncestorOfClass("Model")
+        local hitPlayer = character and Players:GetPlayerFromCharacter(character)
+        if hitPlayer and hitPlayer ~= LocalPlayer then
+            local soundPart = Instance.new("Part")
+            soundPart.Anchored = true
+            soundPart.CanCollide = false
+            soundPart.Transparency = 1
+            soundPart.Size = Vector3.new(0.1,0.1,0.1)
+            soundPart.CFrame = CFrame.new(finalPos)
+            soundPart.Parent = workspace
+
+            local sound = Instance.new("Sound")
+            sound.SoundId = CurrentHitSoundId
+            sound.Volume = HitSoundVolume
+            sound.Parent = soundPart
+            sound:Play()
+            game.Debris:AddItem(soundPart, 3)
+        end
+    end
+
     pcall(function()
         ReplicatedStorage.MainRemotes.MainRemoteEvent:FireServer(
             "ShootGun",
@@ -543,6 +684,8 @@ local function fire()
     beam.Color = useTarget and Color3.fromRGB(0,255,0) or useSilent and Color3.fromRGB(0,255,255) or Color3.new(1, 0.545, 0.149)
     game:GetService("Debris"):AddItem(beam, 0.03)
 end
+
+-- REPLACE the entire `fireTargetAll()` function (around line ~450) with this:
 
 local function fireTargetAll()
     if not currentTool or not currentTool.Parent then return end
@@ -587,6 +730,29 @@ local function fireTargetAll()
             local hitPart = result and result.Instance
             local normal = result and result.Normal
             local hitPos = result and result.Position
+
+            -- HIT SOUND FOR TARGET ALL (before firing)
+            if HitSoundEnabled and (hitPart or part) then
+                local character = (hitPart or part):FindFirstAncestorOfClass("Model")
+                local hitPlayer = character and Players:GetPlayerFromCharacter(character)
+                if hitPlayer and hitPlayer ~= LocalPlayer then
+                    local soundPart = Instance.new("Part")
+                    soundPart.Anchored = true
+                    soundPart.CanCollide = false
+                    soundPart.Transparency = 1
+                    soundPart.Size = Vector3.new(0.1,0.1,0.1)
+                    soundPart.CFrame = CFrame.new(hitPos or pred)
+                    soundPart.Parent = workspace
+
+                    local sound = Instance.new("Sound")
+                    sound.SoundId = CurrentHitSoundId
+                    sound.Volume = HitSoundVolume
+                    sound.Parent = soundPart
+                    sound:Play()
+                    game.Debris:AddItem(soundPart, 3)
+                end
+            end
+
             pcall(function()
                 ReplicatedStorage.MainRemotes.MainRemoteEvent:FireServer(
                     "ShootGun",
